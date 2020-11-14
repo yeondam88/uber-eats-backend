@@ -13,23 +13,41 @@ exports.User = void 0;
 const index_1 = require("typeorm/index");
 const class_validator_1 = require("class-validator");
 const core_entity_1 = require("../../common/entities/core.entity");
+const graphql_1 = require("@nestjs/graphql");
+var UserRole;
+(function (UserRole) {
+    UserRole[UserRole["Client"] = 0] = "Client";
+    UserRole[UserRole["Owner"] = 1] = "Owner";
+    UserRole[UserRole["Delivery"] = 2] = "Delivery";
+})(UserRole || (UserRole = {}));
+graphql_1.registerEnumType(UserRole, { name: 'UserRole' });
 let User = class User extends core_entity_1.CoreEntity {
 };
 __decorate([
     index_1.Column(),
     class_validator_1.IsString(),
+    graphql_1.Field(() => String),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
     index_1.Column(),
     class_validator_1.IsString(),
+    graphql_1.Field(() => String),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    index_1.Column(),
-    __metadata("design:type", String)
+    index_1.Column({
+        type: 'enum',
+        enum: UserRole,
+    }),
+    graphql_1.Field(() => UserRole),
+    __metadata("design:type", Number)
 ], User.prototype, "role", void 0);
 User = __decorate([
+    graphql_1.InputType({
+        isAbstract: true,
+    }),
+    graphql_1.ObjectType(),
     index_1.Entity()
 ], User);
 exports.User = User;

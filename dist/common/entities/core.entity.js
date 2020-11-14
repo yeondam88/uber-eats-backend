@@ -11,18 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CoreEntity = void 0;
 const index_1 = require("typeorm/index");
+const graphql_1 = require("@nestjs/graphql");
 class CoreEntity {
 }
 __decorate([
     index_1.PrimaryGeneratedColumn(),
+    graphql_1.Field(() => Number),
     __metadata("design:type", Number)
 ], CoreEntity.prototype, "id", void 0);
 __decorate([
     index_1.CreateDateColumn(),
+    graphql_1.Field(() => Date),
     __metadata("design:type", Date)
 ], CoreEntity.prototype, "createdAt", void 0);
 __decorate([
     index_1.UpdateDateColumn(),
+    graphql_1.Field(() => Date),
     __metadata("design:type", Date)
 ], CoreEntity.prototype, "updatedAt", void 0);
 exports.CoreEntity = CoreEntity;

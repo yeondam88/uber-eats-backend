@@ -1,5 +1,9 @@
 import { CoreEntity } from '../../common/entities/core.entity';
-declare type UserRole = 'client' | 'owner' | 'delivery';
+declare enum UserRole {
+    Client = 0,
+    Owner = 1,
+    Delivery = 2
+}
 export declare class User extends CoreEntity {
     email: string;
     password: string;
