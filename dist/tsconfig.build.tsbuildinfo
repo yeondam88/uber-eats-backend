@@ -5690,9 +5690,14 @@
         "signature": "330a671c81525c627aa660f3f2e1a51cb4aabc4faeb3209dca0b830aea762d35",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/bcrypt/index.d.ts": {
+        "version": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
+        "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
+        "affectsGlobalScope": false
+      },
       "../src/users/entities/user.entity.ts": {
-        "version": "85d013273fd98ffd7e3a1b52a067d21b542403010e132a2350b5db6c35b35443",
-        "signature": "5442efd8211006e6e41839ada2012bea93c838876cf8b2800e377ae2bc01b141",
+        "version": "145cb6976a78538eb4824dfc8b180e8857c0e8814d36238b7c6bab174f336939",
+        "signature": "183168670bed87244359d534c45f3431a07edce4bafc7c9d7c6c0263907f3819",
         "affectsGlobalScope": false
       },
       "../src/users/dtos/create-account.dto.ts": {
@@ -5701,12 +5706,12 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.service.ts": {
-        "version": "508e1f13b720cddef4392cd33625eb6a38fb99cbad27ed57fd1b9979ad8cba7c",
-        "signature": "b25c8d6684407ba54db4c404d3399ee507381fccde457a19180e7d36c29501ce",
+        "version": "63d32b2b2db4ce8566f99e78447d93a883dd170f1ff7a70703a147df18f273c6",
+        "signature": "bf429bf9f12c7c5b3e6a4b7b4bb4843ff26979c0c1b3007c38decdac0280b367",
         "affectsGlobalScope": false
       },
       "../src/users/users.resolver.ts": {
-        "version": "fe43422db0e24272176ab4fba9ae8ec038e3c48a91bb37fd810a53eace248d2a",
+        "version": "df13d903d374db714b1f372404cd1c078e6e6775947e43f02664b055679047ec",
         "signature": "84b1f350457cf316ecc2f76b7a7254364a2f7b0c95639b0c407db3fdf605f957",
         "affectsGlobalScope": false
       },
@@ -10876,7 +10881,9 @@
         "../src/users/entities/user.entity.ts"
       ],
       "../src/users/entities/user.entity.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/class-validator/types/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/common/entities/core.entity.ts"
@@ -16051,6 +16058,7 @@
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__template/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
+      "../node_modules/@types/bcrypt/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/content-disposition/index.d.ts",

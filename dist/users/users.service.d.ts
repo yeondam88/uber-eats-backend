@@ -4,5 +4,8 @@ import { CreateAccountInput } from './dtos/create-account.dto';
 export declare class UsersService {
     private readonly users;
     constructor(users: Repository<User>);
-    createAccount({ email, password, role, }: CreateAccountInput): Promise<string | undefined>;
+    createAccount({ email, password, role, }: CreateAccountInput): Promise<{
+        ok: boolean;
+        error?: string;
+    }>;
 }

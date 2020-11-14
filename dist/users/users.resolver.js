@@ -26,13 +26,11 @@ let UsersResolver = class UsersResolver {
     }
     async createAccount(createAccountInput) {
         try {
-            const error = await this.usersService.createAccount(createAccountInput);
-            if (error) {
-                return {
-                    ok: false,
-                    error,
-                };
-            }
+            const { ok, error } = await this.usersService.createAccount(createAccountInput);
+            return {
+                ok,
+                error,
+            };
         }
         catch (error) {
             return {
@@ -40,9 +38,6 @@ let UsersResolver = class UsersResolver {
                 ok: false,
             };
         }
-        return {
-            ok: true,
-        };
     }
 };
 __decorate([
