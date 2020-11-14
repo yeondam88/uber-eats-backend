@@ -34,6 +34,34 @@ let UsersService = class UsersService {
             return { ok: false, error: "Couldn't create an account" };
         }
     }
+    async login({ email, password, }) {
+        try {
+            const user = await this.users.findOne({ email });
+            if (!user) {
+                return {
+                    ok: false,
+                    error: 'User not found',
+                };
+            }
+            const checkPassword = await user.checkPassword(password);
+            if (!checkPassword) {
+                return {
+                    ok: false,
+                    error: 'Wrong password',
+                };
+            }
+            return {
+                ok: true,
+                token: 'asdasdasdasd',
+            };
+        }
+        catch (error) {
+            return {
+                ok: false,
+                error,
+            };
+        }
+    }
 };
 UsersService = __decorate([
     common_1.Injectable(),

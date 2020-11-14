@@ -1,5 +1,5 @@
 import { BeforeInsert, Column, Entity } from 'typeorm/index';
-import { IsString } from 'class-validator';
+import { IsEmail, IsEnum, IsString } from 'class-validator';
 import { CoreEntity } from '../../common/entities/core.entity';
 import {
   Field,
@@ -25,13 +25,13 @@ registerEnumType(UserRole, { name: 'UserRole' });
 @Entity()
 export class User extends CoreEntity {
   @Column()
-  @IsString()
   @Field(() => String)
+  @IsEmail()
   email: string;
 
   @Column()
-  @IsString()
   @Field(() => String)
+  @IsString()
   password: string;
 
   @Column({
@@ -39,14 +39,24 @@ export class User extends CoreEntity {
     enum: UserRole,
   })
   @Field(() => UserRole)
+  @IsEnum(UserRole)
   role: UserRole;
 
   @BeforeInsert()
   async hashPassword(): Promise<void> {
     try {
       this.password = await bcrypt.hash(this.password, 10);
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
+      throw new InternalServerErrorException();
+    }
+  }
+
+  async checkPassword(passwordCandidate: string): Promise<boolean> {
+    try {
+      return await bcrypt.compare(passwordCandidate, this.password);
+    } catch (error) {
+      console.log(error);
       throw new InternalServerErrorException();
     }
   }

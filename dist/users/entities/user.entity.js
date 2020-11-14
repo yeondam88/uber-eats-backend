@@ -28,22 +28,31 @@ let User = class User extends core_entity_1.CoreEntity {
         try {
             this.password = await bcrypt.hash(this.password, 10);
         }
-        catch (e) {
-            console.log(e);
+        catch (error) {
+            console.log(error);
+            throw new common_1.InternalServerErrorException();
+        }
+    }
+    async checkPassword(passwordCandidate) {
+        try {
+            return await bcrypt.compare(passwordCandidate, this.password);
+        }
+        catch (error) {
+            console.log(error);
             throw new common_1.InternalServerErrorException();
         }
     }
 };
 __decorate([
     index_1.Column(),
-    class_validator_1.IsString(),
     graphql_1.Field(() => String),
+    class_validator_1.IsEmail(),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
     index_1.Column(),
-    class_validator_1.IsString(),
     graphql_1.Field(() => String),
+    class_validator_1.IsString(),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
@@ -52,6 +61,7 @@ __decorate([
         enum: UserRole,
     }),
     graphql_1.Field(() => UserRole),
+    class_validator_1.IsEnum(UserRole),
     __metadata("design:type", Number)
 ], User.prototype, "role", void 0);
 __decorate([
