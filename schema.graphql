@@ -1,0 +1,31 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Mutation {
+    createRestaurant(input: CreateRestaurantDto!): Boolean!
+}
+
+type Query {
+    restaurants: [Restaurant!]!
+}
+
+type Restaurant {
+    address: String!
+    categoryName: String!
+    id: Float!
+    isVegan: Boolean!
+    name: String!
+    ownerName: String!
+}
+
+input CreateRestaurantDto {
+    address: String!
+    categoryName: String!
+    isVegan: Boolean = true
+    name: String!
+    ownerName: String!
+}
