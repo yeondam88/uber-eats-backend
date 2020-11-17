@@ -3,6 +3,7 @@ import { User } from './entities/user.entity';
 import { CreateAccountInput } from './dtos/create-account.dto';
 import { LoginInput } from './dtos/login.dto';
 import { JwtService } from '../jwt/jwt.service';
+import { EditProfileInput } from './dtos/edit-profile.dto';
 export declare class UsersService {
     private readonly users;
     private readonly jwtService;
@@ -17,4 +18,5 @@ export declare class UsersService {
         token?: string;
     }>;
     findById(id: number): Promise<User>;
+    editProfile(userId: number, { email, password }: EditProfileInput): Promise<User>;
 }

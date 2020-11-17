@@ -1,4 +1,4 @@
-import { BeforeInsert, Column, Entity } from 'typeorm/index';
+import { BeforeInsert, BeforeUpdate, Column, Entity } from 'typeorm/index';
 import { IsEmail, IsEnum, IsString } from 'class-validator';
 import { CoreEntity } from '../../common/entities/core.entity';
 import {
@@ -43,6 +43,7 @@ export class User extends CoreEntity {
   role: UserRole;
 
   @BeforeInsert()
+  @BeforeUpdate()
   async hashPassword(): Promise<void> {
     try {
       this.password = await bcrypt.hash(this.password, 10);

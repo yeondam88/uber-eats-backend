@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CoreEntity = void 0;
 const index_1 = require("typeorm/index");
 const graphql_1 = require("@nestjs/graphql");
-class CoreEntity {
-}
+let CoreEntity = class CoreEntity {
+};
 __decorate([
     index_1.PrimaryGeneratedColumn(),
     graphql_1.Field(() => Number),
@@ -29,5 +29,8 @@ __decorate([
     graphql_1.Field(() => Date),
     __metadata("design:type", Date)
 ], CoreEntity.prototype, "updatedAt", void 0);
+CoreEntity = __decorate([
+    graphql_1.ObjectType()
+], CoreEntity);
 exports.CoreEntity = CoreEntity;
 //# sourceMappingURL=core.entity.js.map

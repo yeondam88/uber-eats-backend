@@ -66,6 +66,7 @@ __decorate([
 ], User.prototype, "role", void 0);
 __decorate([
     index_1.BeforeInsert(),
+    index_1.BeforeUpdate(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)

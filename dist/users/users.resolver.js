@@ -21,12 +21,11 @@ const login_dto_1 = require("./dtos/login.dto");
 const common_1 = require("@nestjs/common");
 const auth_guard_1 = require("../auth/auth.guard");
 const auth_user_decorator_1 = require("../auth/auth-user.decorator");
+const user_profile_dto_1 = require("./dtos/user-profile.dto");
+const edit_profile_dto_1 = require("./dtos/edit-profile.dto");
 let UsersResolver = class UsersResolver {
     constructor(usersService) {
         this.usersService = usersService;
-    }
-    hi() {
-        return true;
     }
     async createAccount(createAccountInput) {
         try {
@@ -53,13 +52,39 @@ let UsersResolver = class UsersResolver {
     me(authUser) {
         return authUser;
     }
+    async userProfile(userProfileInput) {
+        try {
+            const user = await this.usersService.findById(userProfileInput.userId);
+            if (!user) {
+                throw new Error('User not found');
+            }
+            return {
+                ok: true,
+                user,
+            };
+        }
+        catch (error) {
+            return {
+                error,
+                ok: false,
+            };
+        }
+    }
+    async editProfile(authUser, editProfileInput) {
+        try {
+            await this.usersService.editProfile(authUser.id, editProfileInput);
+            return {
+                ok: true,
+            };
+        }
+        catch (error) {
+            return {
+                ok: false,
+                error,
+            };
+        }
+    }
 };
-__decorate([
-    graphql_1.Query(() => Boolean),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], UsersResolver.prototype, "hi", null);
 __decorate([
     graphql_1.Mutation(() => create_account_dto_1.CreateAccountOutput),
     __param(0, graphql_1.Args('input')),
@@ -82,6 +107,24 @@ __decorate([
     __metadata("design:paramtypes", [user_entity_1.User]),
     __metadata("design:returntype", void 0)
 ], UsersResolver.prototype, "me", null);
+__decorate([
+    common_1.UseGuards(auth_guard_1.AuthGuard),
+    graphql_1.Query(() => user_profile_dto_1.UserProfileOutput),
+    __param(0, graphql_1.Args()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_profile_dto_1.UserProfileInput]),
+    __metadata("design:returntype", Promise)
+], UsersResolver.prototype, "userProfile", null);
+__decorate([
+    common_1.UseGuards(auth_guard_1.AuthGuard),
+    graphql_1.Mutation(() => edit_profile_dto_1.EditProfileOutput),
+    __param(0, auth_user_decorator_1.AuthUser()),
+    __param(1, graphql_1.Args('input')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_entity_1.User,
+        edit_profile_dto_1.EditProfileInput]),
+    __metadata("design:returntype", Promise)
+], UsersResolver.prototype, "editProfile", null);
 UsersResolver = __decorate([
     graphql_1.Resolver(() => user_entity_1.User),
     __metadata("design:paramtypes", [users_service_1.UsersService])

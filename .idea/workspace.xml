@@ -26,64 +26,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af709103-be47-4370-8fb1-cca9f87e8c80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth-user.decorator.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth-user.decorator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth-user.decorator.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth.guard.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth.guard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth.guard.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth.module.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth.module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/auth/auth.module.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/common/dtos/output.dto.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/common/dtos/output.dto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/common/dtos/output.dto.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/interfaces/jwt-module-options.interface.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/interfaces/jwt-module-options.interface.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/interfaces/jwt-module-options.interface.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.constants.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.constants.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.interfaces.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.interfaces.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.interfaces.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.middleware.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.middleware.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.module.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.module.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.service.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/jwt/jwt.service.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/users/dtos/login.dto.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/users/dtos/login.dto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/users/dtos/login.dto.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/auth-user.decorator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/auth.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/dtos/output.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jwt/jwt.constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jwt/jwt.interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jwt/jwt.middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jwt/jwt.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jwt/jwt.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/dtos/login.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/dtos/output.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/common/dtos/output.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/dtos/output.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/common/dtos/output.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/dtos/output.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/common/dtos/output.dto.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jwt/jwt.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/jwt/jwt.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jwt/jwt.middleware.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/jwt/jwt.middleware.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/users/users.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/users/users.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/users/dtos/login.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/dtos/login.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/users/dtos/login.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/dtos/login.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/users/dtos/login.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/dtos/login.dto.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/users.resolver.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.resolver.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/users.resolver.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.resolver.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/users.resolver.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.resolver.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/users.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.service.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/users.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/users.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/users.service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/dtos/output.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/dtos/output.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/entities/core.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/entities/core.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jwt/jwt.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/jwt/jwt.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/dtos/create-account.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/dtos/create-account.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/dtos/login.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/dtos/login.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/entities/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/entities/user.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/users.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.resolver.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/users.service.ts" afterDir="false" />
     </list>
@@ -183,7 +147,7 @@
       <workItem from="1605158096104" duration="8171000" />
       <workItem from="1605243824378" duration="4397000" />
       <workItem from="1605332191012" duration="5116000" />
-      <workItem from="1605583251938" duration="6098000" />
+      <workItem from="1605583251938" duration="8941000" />
     </task>
     <task id="LOCAL-00001" summary="Connecting to DB">
       <created>1605158775352</created>
@@ -234,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605586138462</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adding Auth guards">
+      <created>1605589363880</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605589363880</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,31 +257,31 @@
       <screen x="47" y="23" width="2513" height="1417" />
     </state>
     <state x="1681" y="358" key="Github.UntrackedFilesDialog/47.23.2513.1417@47.23.2513.1417" timestamp="1604644665337" />
-    <state width="1215" height="282" key="GridCell.Tab.0.bottom" timestamp="1605589275052">
+    <state width="1215" height="282" key="GridCell.Tab.0.bottom" timestamp="1605590422516">
       <screen x="46" y="23" width="2514" height="1417" />
     </state>
-    <state width="1215" height="282" key="GridCell.Tab.0.bottom/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605589275052" />
+    <state width="1215" height="282" key="GridCell.Tab.0.bottom/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605590422516" />
     <state width="1215" height="282" key="GridCell.Tab.0.bottom/2560.23.1680.1027/47.23.2513.1417@47.23.2513.1417" timestamp="1605583414663" />
     <state width="1215" height="282" key="GridCell.Tab.0.bottom/46.23.2514.1417@46.23.2514.1417" timestamp="1605337324587" />
     <state width="1236" height="282" key="GridCell.Tab.0.bottom/47.23.2513.1417@47.23.2513.1417" timestamp="1604646114226" />
-    <state width="1215" height="282" key="GridCell.Tab.0.center" timestamp="1605589275051">
+    <state width="1215" height="282" key="GridCell.Tab.0.center" timestamp="1605590422515">
       <screen x="46" y="23" width="2514" height="1417" />
     </state>
-    <state width="1215" height="282" key="GridCell.Tab.0.center/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605589275051" />
+    <state width="1215" height="282" key="GridCell.Tab.0.center/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605590422515" />
     <state width="1215" height="282" key="GridCell.Tab.0.center/2560.23.1680.1027/47.23.2513.1417@47.23.2513.1417" timestamp="1605583414661" />
     <state width="1215" height="282" key="GridCell.Tab.0.center/46.23.2514.1417@46.23.2514.1417" timestamp="1605337324587" />
     <state width="1236" height="282" key="GridCell.Tab.0.center/47.23.2513.1417@47.23.2513.1417" timestamp="1604646114225" />
-    <state width="1215" height="282" key="GridCell.Tab.0.left" timestamp="1605589275050">
+    <state width="1215" height="282" key="GridCell.Tab.0.left" timestamp="1605590422515">
       <screen x="46" y="23" width="2514" height="1417" />
     </state>
-    <state width="1215" height="282" key="GridCell.Tab.0.left/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605589275050" />
+    <state width="1215" height="282" key="GridCell.Tab.0.left/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605590422515" />
     <state width="1215" height="282" key="GridCell.Tab.0.left/2560.23.1680.1027/47.23.2513.1417@47.23.2513.1417" timestamp="1605583414660" />
     <state width="1215" height="282" key="GridCell.Tab.0.left/46.23.2514.1417@46.23.2514.1417" timestamp="1605337324586" />
     <state width="1236" height="282" key="GridCell.Tab.0.left/47.23.2513.1417@47.23.2513.1417" timestamp="1604646114225" />
-    <state width="1215" height="282" key="GridCell.Tab.0.right" timestamp="1605589275051">
+    <state width="1215" height="282" key="GridCell.Tab.0.right" timestamp="1605590422516">
       <screen x="46" y="23" width="2514" height="1417" />
     </state>
-    <state width="1215" height="282" key="GridCell.Tab.0.right/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605589275051" />
+    <state width="1215" height="282" key="GridCell.Tab.0.right/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605590422516" />
     <state width="1215" height="282" key="GridCell.Tab.0.right/2560.23.1680.1027/47.23.2513.1417@47.23.2513.1417" timestamp="1605583414662" />
     <state width="1215" height="282" key="GridCell.Tab.0.right/46.23.2514.1417@46.23.2514.1417" timestamp="1605337324587" />
     <state width="1236" height="282" key="GridCell.Tab.0.right/47.23.2513.1417@47.23.2513.1417" timestamp="1604646114225" />
@@ -328,11 +299,15 @@
     </state>
     <state width="500" height="445" key="SwitcherDM/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605246529865" />
     <state width="500" height="445" key="SwitcherDM/46.23.2514.1417@46.23.2514.1417" timestamp="1605336446318" />
-    <state x="1531" y="467" key="Vcs.Push.Dialog.v2" timestamp="1605586144076">
+    <state x="1531" y="467" key="Vcs.Push.Dialog.v2" timestamp="1605589367215">
       <screen x="46" y="23" width="2514" height="1417" />
     </state>
-    <state x="1531" y="467" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605586144076" />
+    <state x="1531" y="467" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605589367215" />
     <state x="1531" y="467" key="Vcs.Push.Dialog.v2/46.23.2514.1417@46.23.2514.1417" timestamp="1605337254413" />
+    <state x="1634" y="470" width="584" height="522" key="find.popup" timestamp="1605590404316">
+      <screen x="46" y="23" width="2514" height="1417" />
+    </state>
+    <state x="1634" y="470" width="584" height="522" key="find.popup/2560.23.1680.1027/46.23.2514.1417@46.23.2514.1417" timestamp="1605590404316" />
     <state x="1576" y="455" width="700" height="530" key="recent.locations.popup" timestamp="1605333012402">
       <screen x="46" y="23" width="2514" height="1417" />
     </state>
