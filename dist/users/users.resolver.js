@@ -18,6 +18,9 @@ const user_entity_1 = require("./entities/user.entity");
 const users_service_1 = require("./users.service");
 const create_account_dto_1 = require("./dtos/create-account.dto");
 const login_dto_1 = require("./dtos/login.dto");
+const common_1 = require("@nestjs/common");
+const auth_guard_1 = require("../auth/auth.guard");
+const auth_user_decorator_1 = require("../auth/auth-user.decorator");
 let UsersResolver = class UsersResolver {
     constructor(usersService) {
         this.usersService = usersService;
@@ -47,6 +50,9 @@ let UsersResolver = class UsersResolver {
             };
         }
     }
+    me(authUser) {
+        return authUser;
+    }
 };
 __decorate([
     graphql_1.Query(() => Boolean),
@@ -68,6 +74,14 @@ __decorate([
     __metadata("design:paramtypes", [login_dto_1.LoginInput]),
     __metadata("design:returntype", Promise)
 ], UsersResolver.prototype, "login", null);
+__decorate([
+    graphql_1.Query(() => user_entity_1.User),
+    common_1.UseGuards(auth_guard_1.AuthGuard),
+    __param(0, auth_user_decorator_1.AuthUser()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [user_entity_1.User]),
+    __metadata("design:returntype", void 0)
+], UsersResolver.prototype, "me", null);
 UsersResolver = __decorate([
     graphql_1.Resolver(() => user_entity_1.User),
     __metadata("design:paramtypes", [users_service_1.UsersService])
