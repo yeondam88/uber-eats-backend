@@ -13,13 +13,15 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersService = void 0;
-const typeorm_1 = require("@nestjs/typeorm");
-const user_entity_1 = require("./entities/user.entity");
-const index_1 = require("typeorm/index");
 const common_1 = require("@nestjs/common");
+const typeorm_1 = require("@nestjs/typeorm");
+const index_1 = require("typeorm/index");
+const user_entity_1 = require("./entities/user.entity");
+const jwt_service_1 = require("../jwt/jwt.service");
 let UsersService = class UsersService {
-    constructor(users) {
+    constructor(users, jwtService) {
         this.users = users;
+        this.jwtService = jwtService;
     }
     async createAccount({ email, password, role, }) {
         try {
@@ -50,9 +52,10 @@ let UsersService = class UsersService {
                     error: 'Wrong password',
                 };
             }
+            const token = this.jwtService.sign(user.id);
             return {
                 ok: true,
-                token: 'asdasdasdasd',
+                token,
             };
         }
         catch (error) {
@@ -66,7 +69,8 @@ let UsersService = class UsersService {
 UsersService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(user_entity_1.User)),
-    __metadata("design:paramtypes", [index_1.Repository])
+    __metadata("design:paramtypes", [index_1.Repository,
+        jwt_service_1.JwtService])
 ], UsersService);
 exports.UsersService = UsersService;
 //# sourceMappingURL=users.service.js.map
