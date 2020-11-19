@@ -25,12 +25,14 @@ var UserRole;
 graphql_1.registerEnumType(UserRole, { name: 'UserRole' });
 let User = class User extends core_entity_1.CoreEntity {
     async hashPassword() {
-        try {
-            this.password = await bcrypt.hash(this.password, 10);
-        }
-        catch (error) {
-            console.log(error);
-            throw new common_1.InternalServerErrorException();
+        if (this.password) {
+            try {
+                this.password = await bcrypt.hash(this.password, 10);
+            }
+            catch (error) {
+                console.log(error);
+                throw new common_1.InternalServerErrorException();
+            }
         }
     }
     async checkPassword(passwordCandidate) {
@@ -50,7 +52,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
-    index_1.Column(),
+    index_1.Column({ select: false }),
     graphql_1.Field(() => String),
     class_validator_1.IsString(),
     __metadata("design:type", String)
@@ -64,6 +66,11 @@ __decorate([
     class_validator_1.IsEnum(UserRole),
     __metadata("design:type", Number)
 ], User.prototype, "role", void 0);
+__decorate([
+    index_1.Column({ default: false }),
+    graphql_1.Field(() => Boolean),
+    __metadata("design:type", Boolean)
+], User.prototype, "verified", void 0);
 __decorate([
     index_1.BeforeInsert(),
     index_1.BeforeUpdate(),

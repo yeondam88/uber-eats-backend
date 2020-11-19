@@ -13,76 +13,38 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersResolver = void 0;
+const common_1 = require("@nestjs/common");
 const graphql_1 = require("@nestjs/graphql");
 const user_entity_1 = require("./entities/user.entity");
 const users_service_1 = require("./users.service");
-const create_account_dto_1 = require("./dtos/create-account.dto");
-const login_dto_1 = require("./dtos/login.dto");
-const common_1 = require("@nestjs/common");
 const auth_guard_1 = require("../auth/auth.guard");
 const auth_user_decorator_1 = require("../auth/auth-user.decorator");
+const login_dto_1 = require("./dtos/login.dto");
+const create_account_dto_1 = require("./dtos/create-account.dto");
 const user_profile_dto_1 = require("./dtos/user-profile.dto");
 const edit_profile_dto_1 = require("./dtos/edit-profile.dto");
+const verify_email_dto_1 = require("./dtos/verify.email.dto");
 let UsersResolver = class UsersResolver {
     constructor(usersService) {
         this.usersService = usersService;
     }
     async createAccount(createAccountInput) {
-        try {
-            return this.usersService.createAccount(createAccountInput);
-        }
-        catch (error) {
-            return {
-                error,
-                ok: false,
-            };
-        }
+        return this.usersService.createAccount(createAccountInput);
     }
     async login(loginInput) {
-        try {
-            return this.usersService.login(loginInput);
-        }
-        catch (error) {
-            return {
-                ok: false,
-                error,
-            };
-        }
+        return this.usersService.login(loginInput);
     }
     me(authUser) {
         return authUser;
     }
     async userProfile(userProfileInput) {
-        try {
-            const user = await this.usersService.findById(userProfileInput.userId);
-            if (!user) {
-                throw new Error('User not found');
-            }
-            return {
-                ok: true,
-                user,
-            };
-        }
-        catch (error) {
-            return {
-                error,
-                ok: false,
-            };
-        }
+        return await this.usersService.findById(userProfileInput.userId);
     }
     async editProfile(authUser, editProfileInput) {
-        try {
-            await this.usersService.editProfile(authUser.id, editProfileInput);
-            return {
-                ok: true,
-            };
-        }
-        catch (error) {
-            return {
-                ok: false,
-                error,
-            };
-        }
+        return await this.usersService.editProfile(authUser.id, editProfileInput);
+    }
+    async verifyEmail({ code }) {
+        return await this.usersService.verifyEmail(code);
     }
 };
 __decorate([
@@ -125,6 +87,13 @@ __decorate([
         edit_profile_dto_1.EditProfileInput]),
     __metadata("design:returntype", Promise)
 ], UsersResolver.prototype, "editProfile", null);
+__decorate([
+    graphql_1.Mutation(() => verify_email_dto_1.VerifyEmailOutput),
+    __param(0, graphql_1.Args('input')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [verify_email_dto_1.VerifyEmailInput]),
+    __metadata("design:returntype", Promise)
+], UsersResolver.prototype, "verifyEmail", null);
 UsersResolver = __decorate([
     graphql_1.Resolver(() => user_entity_1.User),
     __metadata("design:paramtypes", [users_service_1.UsersService])
