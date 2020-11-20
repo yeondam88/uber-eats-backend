@@ -1,6 +1,6 @@
 import { BeforeInsert, BeforeUpdate, Column, Entity } from 'typeorm/index';
 import { IsEmail, IsEnum, IsString } from 'class-validator';
-import { CoreEntity } from '../../common/entities/core.entity';
+import { CoreEntity } from 'src/common/entities/core.entity';
 import {
   Field,
   InputType,

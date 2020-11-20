@@ -1,4 +1,4 @@
-import { CoreEntity } from '../../common/entities/core.entity';
+import { CoreEntity } from 'src/common/entities/core.entity';
 declare enum UserRole {
     Client = 0,
     Owner = 1,

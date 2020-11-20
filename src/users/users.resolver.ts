@@ -3,8 +3,8 @@ import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 
 import { User } from './entities/user.entity';
 import { UsersService } from './users.service';
-import { AuthGuard } from '../auth/auth.guard';
-import { AuthUser } from '../auth/auth-user.decorator';
+import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthUser } from 'src/auth/auth-user.decorator';
 
 import { LoginInput, LoginOutput } from './dtos/login.dto';
 import {
