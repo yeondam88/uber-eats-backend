@@ -97,7 +97,7 @@
       "!<rootDir>/**/*.dto.ts"
     ],
     "coveragePathIgnorePatterns": [
-      "node_modules",
+      "/node_modules/",
       ".entity.ts",
       ".constants.ts"
     ]

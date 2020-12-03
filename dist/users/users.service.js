@@ -15,11 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
+const jwt_service_1 = require("../jwt/jwt.service");
+const mail_service_1 = require("../mail/mail.service");
 const index_1 = require("typeorm/index");
 const user_entity_1 = require("./entities/user.entity");
-const jwt_service_1 = require("../jwt/jwt.service");
 const verification_entity_1 = require("./entities/verification.entity");
-const mail_service_1 = require("../mail/mail.service");
 let UsersService = class UsersService {
     constructor(users, verification, jwtService, mailService) {
         this.users = users;
@@ -76,12 +76,10 @@ let UsersService = class UsersService {
     async findById(id) {
         try {
             const user = await this.users.findOne({ id });
-            if (user) {
-                return {
-                    ok: true,
-                    user,
-                };
-            }
+            return {
+                ok: true,
+                user,
+            };
         }
         catch (error) {
             return {
@@ -96,6 +94,7 @@ let UsersService = class UsersService {
             if (email) {
                 user.email = email;
                 user.verified = false;
+                await this.verification.delete({ user: { id: user.id } });
                 const verification = await this.verification.save(this.verification.create({ user }));
                 await this.mailService.sendVerificationEmail(user.email, 'lloyd.park88@gmail.com', verification.code);
             }

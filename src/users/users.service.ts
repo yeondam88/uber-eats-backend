@@ -1,17 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { JwtService } from 'src/jwt/jwt.service';
+import { MailService } from 'src/mail/mail.service';
 
 import { Repository } from 'typeorm/index';
-import { User } from './entities/user.entity';
 import { CreateAccountInput } from './dtos/create-account.dto';
-import { LoginInput, LoginOutput } from './dtos/login.dto';
 
-import { JwtService } from 'src/jwt/jwt.service';
 import { EditProfileInput, EditProfileOutput } from './dtos/edit-profile.dto';
-import { Verification } from './entities/verification.entity';
-import { VerifyEmailOutput } from './dtos/verify.email.dto';
+import { LoginInput, LoginOutput } from './dtos/login.dto';
 import { UserProfileOutput } from './dtos/user-profile.dto';
-import { MailService } from 'src/mail/mail.service';
+import { VerifyEmailOutput } from './dtos/verify.email.dto';
+import { User } from './entities/user.entity';
+import { Verification } from './entities/verification.entity';
 
 @Injectable()
 export class UsersService {
@@ -88,12 +88,10 @@ export class UsersService {
   async findById(id: number): Promise<UserProfileOutput> {
     try {
       const user = await this.users.findOne({ id });
-      if (user) {
-        return {
-          ok: true,
-          user,
-        };
-      }
+      return {
+        ok: true,
+        user,
+      };
     } catch (error) {
       return {
         ok: false,
@@ -111,6 +109,7 @@ export class UsersService {
       if (email) {
         user.email = email;
         user.verified = false;
+        await this.verification.delete({ user: { id: user.id } });
         const verification = await this.verification.save(
           this.verification.create({ user }),
         );
