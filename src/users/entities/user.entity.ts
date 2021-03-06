@@ -1,5 +1,12 @@
-import { BeforeInsert, BeforeUpdate, Column, Entity } from 'typeorm/index';
-import { IsEmail, IsEnum, IsString } from 'class-validator';
+import { Restaurant } from 'src/restaurants/entities/restaurant.entity';
+import {
+  BeforeInsert,
+  BeforeUpdate,
+  Column,
+  Entity,
+  OneToMany,
+} from 'typeorm/index';
+import { IsBoolean, IsEmail, IsEnum, IsString } from 'class-validator';
 import { CoreEntity } from 'src/common/entities/core.entity';
 import {
   Field,
@@ -10,15 +17,15 @@ import {
 import * as bcrypt from 'bcrypt';
 import { InternalServerErrorException } from '@nestjs/common';
 
-enum UserRole {
-  Client,
-  Owner,
-  Delivery,
+export enum UserRole {
+  Client = 'Client',
+  Owner = 'Owner',
+  Delivery = 'Delivery',
 }
 
 registerEnumType(UserRole, { name: 'UserRole' });
 
-@InputType({
+@InputType('UserInputType', {
   isAbstract: true,
 })
 @ObjectType()
@@ -44,7 +51,12 @@ export class User extends CoreEntity {
 
   @Column({ default: false })
   @Field(() => Boolean)
+  @IsBoolean()
   verified: boolean;
+
+  @Field(() => [Restaurant])
+  @OneToMany(() => Restaurant, (Restaurant) => Restaurant.owner)
+  restaurants: Restaurant[];
 
   @BeforeInsert()
   @BeforeUpdate()

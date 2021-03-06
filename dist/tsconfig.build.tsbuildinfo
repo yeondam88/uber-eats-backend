@@ -5070,6 +5070,11 @@
         "signature": "4068044a45ccae8c314485337305559035d1317a82809aa1c11a6eb8ece26273",
         "affectsGlobalScope": false
       },
+      "../src/common/entities/core.entity.ts": {
+        "version": "8b816a8b0b8d8f30687daf408e0d6da4d64593d1bb981606e1f985f87194198d",
+        "signature": "330a671c81525c627aa660f3f2e1a51cb4aabc4faeb3209dca0b830aea762d35",
+        "affectsGlobalScope": false
+      },
       "../node_modules/class-validator/types/validation/validationerror.d.ts": {
         "version": "d224f2ef464cf2a544dcf6be6b416db5563aa5ca4c94e2a1d93bf3765c1f77cb",
         "signature": "d224f2ef464cf2a544dcf6be6b416db5563aa5ca4c94e2a1d93bf3765c1f77cb",
@@ -5685,9 +5690,14 @@
         "signature": "1d5f30cbd06ffa2aab22346b087e140f069851c17b91189be8d1e168d53f9f93",
         "affectsGlobalScope": false
       },
-      "../src/common/entities/core.entity.ts": {
-        "version": "8b816a8b0b8d8f30687daf408e0d6da4d64593d1bb981606e1f985f87194198d",
-        "signature": "330a671c81525c627aa660f3f2e1a51cb4aabc4faeb3209dca0b830aea762d35",
+      "../src/restaurants/entities/category.entity.ts": {
+        "version": "4366788ea57248f6cedc1cd7fe0047d02a3c58a7cf3612d8a643f0b1dafa947e",
+        "signature": "c7358df1d64b76d2674b75287e87af3ddd9c20e2d4eba27d203708317c35a919",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/entities/restaurant.entity.ts": {
+        "version": "2c1ddf05404cfc819fd0def567449a558fb092dd40e5279e12061d6c56bd8c03",
+        "signature": "52769341c3df523e2a1c918458bc2e11afe881d0a4cf197d6af8b6b167f112d3",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/bcrypt/index.d.ts": {
@@ -5696,8 +5706,293 @@
         "affectsGlobalScope": false
       },
       "../src/users/entities/user.entity.ts": {
-        "version": "f8170b6d084d2d26db1eba0f96af84cab0b621b0b4f3b9c6e6f2ae43eb1a687d",
-        "signature": "e99af39152bd0a93c1f46d5032d05cb6237a0ef663d1b3cd8e8f9c9156bfb203",
+        "version": "dd7061e2fc0f1426c23a346964912e6d45484e8cdda87108ede947e3952cab23",
+        "signature": "126f738556ac8debf9713190298fdb1839d059a724ead74e3cb4a915119aad4f",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/role.decorator.ts": {
+        "version": "d8afc8bf872a033603cd983914565294bff9d89d3868194d833c7004970c9e26",
+        "signature": "28e2dfa386a119c1598bda6fe0f92d92e9d4a3f0941c0b7493eaff831d72a54e",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth.guard.ts": {
+        "version": "5d6c4af17ecffc0470741e596679d0883a5ee0216317f5119ada3975382cff30",
+        "signature": "203b02b7dd181d230245f2e10171c709478b66c4bd82d47123c1683f6a433576",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth.module.ts": {
+        "version": "ec72934f5e1f8889268ce45562c9245c4c179cb86a05c1b3038dbedfe95f4bea",
+        "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/repositories/category.repository.ts": {
+        "version": "f3901d1dbdef9ef47ade10e74af972ca650d4498e856ef3e3e2694fa2f937de1",
+        "signature": "0f71374a2469c70719bee7e8baa4d6fe1f320baa2476c86ba009bdea81283c11",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth-user.decorator.ts": {
+        "version": "1efcd7b984225e59e7273a4f38d96b6d5cce572fb1bb98123b406b3191e7c324",
+        "signature": "cd1e457df3b82a86ca479fcda6e01c8ff3874ebdbdc812db7f6734d8561f4788",
+        "affectsGlobalScope": false
+      },
+      "../src/common/dtos/output.dto.ts": {
+        "version": "b232c826f847d1d16db4af9fa066394502b0c56b3757c89df8132692cd2f2b1a",
+        "signature": "3902088f28d17f80017f0aea701d2f58e41ef28c08ac04def6f469818023cc54",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/pagination.dto.ts": {
+        "version": "143380b0650e5969d790c9cf7038d09342a6ba00aa6ecbfd3e83b4b58124f781",
+        "signature": "a2c3787c063cca09f5ca9beb850f2d8eb3c72df82de738ad572aac4d1e2a6372",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/category.dto.ts": {
+        "version": "e284f72a0fcdac9d734c604b0d8e42bc1ac8a46fddfc37b5caa0c206f12b4389",
+        "signature": "ddd6a1519f7e9d0b17be1b663935bbc4d64ce4bf804236563dd34e946b457b94",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/delete-restaurant.dto.ts": {
+        "version": "3687106513b585e43355b02779710d658e120f334e9796d043f343024e2907d9",
+        "signature": "313cde0201d7d0d4c11487462cf95206f3225a7ecbcc82ab01b933fe78fa95ea",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/create-restaurant.dto.ts": {
+        "version": "4805211ab7dd38de0e1f6c3fb25a1db1619beb1112c606121c1cdc95f04d41a3",
+        "signature": "1fbadd0f203bf23c6b84f7571951cc3bd10b5591ad1e45d859fe44c333f3aa42",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/edit-restaurant.dto.ts": {
+        "version": "9ac5a1ae7538ea8f39b874bb5cea005e1a771e5074107ef4f1137e1e1aebff39",
+        "signature": "835666fee93ebe4f57c73b304fca6aa6c00e3718d21a578e08bf8f848ad913fd",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/restaurants.dto.ts": {
+        "version": "ed45c63eb1a8d7c0ae8b22ffd8d31c1b1a2247e00494af4c2b7c7a77b05c25ad",
+        "signature": "25b352cbc0163afaeb13a1cf676cfecc52471c7051c6bf02dd452484e01e7053",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/search-restaurant.dto.ts": {
+        "version": "39aa3632e51ac1aafaaaef1ad117505e4a56011ae6b1e52958035e9bcb6bb447",
+        "signature": "fc2ce03a9ca158570035b9d6d1149cd98aea21cee18c05f115280efdbba5f9b6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/subjectsubscription.d.ts": {
+        "version": "d3b90621a899126e7ef2f59040e7bfd813e0cbcb87bd0c5e0bd4e0d417257cbd",
+        "signature": "d3b90621a899126e7ef2f59040e7bfd813e0cbcb87bd0c5e0bd4e0d417257cbd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/frompromise.d.ts": {
+        "version": "63d9a8bb05d5e0252b084c4a457c012fdcb78d63836d7c04b45221ab93819068",
+        "signature": "63d9a8bb05d5e0252b084c4a457c012fdcb78d63836d7c04b45221ab93819068",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/fromiterable.d.ts": {
+        "version": "dbcf44bcbd51e03d6a014f6739a457a71f22e9b190caef3b94942d26074fb728",
+        "signature": "dbcf44bcbd51e03d6a014f6739a457a71f22e9b190caef3b94942d26074fb728",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts": {
+        "version": "7f6d3ef2715d5ca5404eb107e84e7ec3ee818d9cd1e0a5604e4448a2d73bbf8d",
+        "signature": "7f6d3ef2715d5ca5404eb107e84e7ec3ee818d9cd1e0a5604e4448a2d73bbf8d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/dom/ajax.d.ts": {
+        "version": "6e46df9fad03883b826f4c82b1d70a653a68769602aee73eef3e00e5b4d89cf3",
+        "signature": "6e46df9fad03883b826f4c82b1d70a653a68769602aee73eef3e00e5b4d89cf3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts": {
+        "version": "1382fd829c4aed94dbf48c12b2e612993e1b77965bd141d6ca3e07d55e467be7",
+        "signature": "1382fd829c4aed94dbf48c12b2e612993e1b77965bd141d6ca3e07d55e467be7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/dom/websocket.d.ts": {
+        "version": "772de7835f22689ecc41724bfaad1991770aad0a155ba7b7c2526b315d9fe19c",
+        "signature": "772de7835f22689ecc41724bfaad1991770aad0a155ba7b7c2526b315d9fe19c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/observable/subscribeonobservable.d.ts": {
+        "version": "62e4dbcae7e7ed467874c57ea880e9eb2952583e81e83874c6ac4071e8673281",
+        "signature": "62e4dbcae7e7ed467874c57ea880e9eb2952583e81e83874c6ac4071e8673281",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts": {
+        "version": "5f2e3c41a86298505ded2ad2d598247b789167031d67a8d178601d3165518537",
+        "signature": "5f2e3c41a86298505ded2ad2d598247b789167031d67a8d178601d3165518537",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts": {
+        "version": "12d982374f5fe9b7dab1c5057353142096bf2645bf35843ba25fa3b8507d71e8",
+        "signature": "12d982374f5fe9b7dab1c5057353142096bf2645bf35843ba25fa3b8507d71e8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts": {
+        "version": "7e0801db65552d2ba7902b6966c11a8e42a4b25cffc07944f9d21df7ffa5236e",
+        "signature": "7e0801db65552d2ba7902b6966c11a8e42a4b25cffc07944f9d21df7ffa5236e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/operators/throttle.d.ts": {
+        "version": "fd34e1c778435f973c182b7132782f3cf7a194b522f1ea09978c37d8fc0acd85",
+        "signature": "fd34e1c778435f973c182b7132782f3cf7a194b522f1ea09978c37d8fc0acd85",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/symbol/rxsubscriber.d.ts": {
+        "version": "3977d061c588d5ce13293ab68d2bd87ffc965592635f35b43441f98eb60065d8",
+        "signature": "3977d061c588d5ce13293ab68d2bd87ffc965592635f35b43441f98eb60065d8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/symbol/iterator.d.ts": {
+        "version": "4c608fd897fed787b0923db484ffdcf6a7e6a66f9e118ccefc1db807f2d9c813",
+        "signature": "4c608fd897fed787b0923db484ffdcf6a7e6a66f9e118ccefc1db807f2d9c813",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/immediate.d.ts": {
+        "version": "0ce5b823ceaa7d76a3d329a0f109a61cd3615da383e887c356f142b20eb300b3",
+        "signature": "0ce5b823ceaa7d76a3d329a0f109a61cd3615da383e887c356f142b20eb300b3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/applymixins.d.ts": {
+        "version": "5853c1f854868393edd2a14f72fdf8aedf6e8508e9c1e1db648dd0686be314bc",
+        "signature": "5853c1f854868393edd2a14f72fdf8aedf6e8508e9c1e1db648dd0686be314bc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/errorobject.d.ts": {
+        "version": "e1603a12ed84f4322792328e62c8efdd3d2668883af82ebb29a92be9ec5d006d",
+        "signature": "e1603a12ed84f4322792328e62c8efdd3d2668883af82ebb29a92be9ec5d006d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/hostreporterror.d.ts": {
+        "version": "ce6cd53ca2d698c3f5096f81658134108fc8aa2aec4b420933fe4f98c67366dd",
+        "signature": "ce6cd53ca2d698c3f5096f81658134108fc8aa2aec4b420933fe4f98c67366dd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isarray.d.ts": {
+        "version": "5c762af514cc63a60f4ed90ca9e262cecf8506b07060c0bf8f76724d18000b1b",
+        "signature": "5c762af514cc63a60f4ed90ca9e262cecf8506b07060c0bf8f76724d18000b1b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isarraylike.d.ts": {
+        "version": "dbb1c23fae7f956e43c821e8e7ec6310ee3f47d97d48a5425c7608182ce447f6",
+        "signature": "dbb1c23fae7f956e43c821e8e7ec6310ee3f47d97d48a5425c7608182ce447f6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isdate.d.ts": {
+        "version": "dfda71fb8fe822f5ae3dab094819b76373595e8618e62827585f92b3129fb404",
+        "signature": "dfda71fb8fe822f5ae3dab094819b76373595e8618e62827585f92b3129fb404",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isfunction.d.ts": {
+        "version": "c889da54f7a5a5514fba669c91d02147768677cba0f4eeda4a08accc2c9fc183",
+        "signature": "c889da54f7a5a5514fba669c91d02147768677cba0f4eeda4a08accc2c9fc183",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isiterable.d.ts": {
+        "version": "474577f1c73d2f8212940a6fc2c78b59fd58dd3b5b375c9df0d928afec41ea6b",
+        "signature": "474577f1c73d2f8212940a6fc2c78b59fd58dd3b5b375c9df0d928afec41ea6b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isnumeric.d.ts": {
+        "version": "ece8bd3332cfc9df2608d26e14cfb7c7aae68e5b5af122c42e78966f56a5a80a",
+        "signature": "ece8bd3332cfc9df2608d26e14cfb7c7aae68e5b5af122c42e78966f56a5a80a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isobject.d.ts": {
+        "version": "8dfcb3e88102da71e270e99dbd0ebf4fe14e49c0a45e9af83515dec0d5d09517",
+        "signature": "8dfcb3e88102da71e270e99dbd0ebf4fe14e49c0a45e9af83515dec0d5d09517",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isinteropobservable.d.ts": {
+        "version": "4e49b44534839185ee5ed4754c08a6d061795180b2752405d5e3950439677cdd",
+        "signature": "4e49b44534839185ee5ed4754c08a6d061795180b2752405d5e3950439677cdd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/ispromise.d.ts": {
+        "version": "f434b90f83b34647aecc16e51ee915783ecefa04ac6d96ef66b6e4e8abb53ddd",
+        "signature": "f434b90f83b34647aecc16e51ee915783ecefa04ac6d96ef66b6e4e8abb53ddd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/isscheduler.d.ts": {
+        "version": "5b602191995b7d4b8d5679daf9e22f1d002fb9ec290f6cfc232a58feede55a1e",
+        "signature": "5b602191995b7d4b8d5679daf9e22f1d002fb9ec290f6cfc232a58feede55a1e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/not.d.ts": {
+        "version": "d72d2bd06288d210268490dfcf0dd8ff17d02fb214f976a0b1eaa987d11a3329",
+        "signature": "d72d2bd06288d210268490dfcf0dd8ff17d02fb214f976a0b1eaa987d11a3329",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/root.d.ts": {
+        "version": "92a499d236f3019dea389d8466076df161c79b236e8190fa634c455c4ac80203",
+        "signature": "92a499d236f3019dea389d8466076df161c79b236e8190fa634c455c4ac80203",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/subscribeto.d.ts": {
+        "version": "7018d0e0419e7dbfde9422197a73ae2974ede43acafb07a4f7b057f16540fd1f",
+        "signature": "7018d0e0419e7dbfde9422197a73ae2974ede43acafb07a4f7b057f16540fd1f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/subscribetoarray.d.ts": {
+        "version": "7423584e3a62ccb9343c773b7d6429524bf918d168e0093405f52353bfaa138b",
+        "signature": "7423584e3a62ccb9343c773b7d6429524bf918d168e0093405f52353bfaa138b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/subscribetoiterable.d.ts": {
+        "version": "def19eda95dbf7af214948e99b7c90f9d045a76bffe1eb271dd2906a8ef16f7d",
+        "signature": "def19eda95dbf7af214948e99b7c90f9d045a76bffe1eb271dd2906a8ef16f7d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/subscribetoobservable.d.ts": {
+        "version": "dfc70d31b38b4a085baaf5a4217d8f9e5ad92e88315bdfddaeda1a0de2255c76",
+        "signature": "dfc70d31b38b4a085baaf5a4217d8f9e5ad92e88315bdfddaeda1a0de2255c76",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/subscribetopromise.d.ts": {
+        "version": "49ac2795bf9504cc523a4556c712bfa7fcce7ece4328f84e26820a6d08014cd4",
+        "signature": "49ac2795bf9504cc523a4556c712bfa7fcce7ece4328f84e26820a6d08014cd4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/subscribetoresult.d.ts": {
+        "version": "781e2b4c6f693dcdc551900277d51f546c993f3246d192c34c39593fb11959bf",
+        "signature": "781e2b4c6f693dcdc551900277d51f546c993f3246d192c34c39593fb11959bf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/tosubscriber.d.ts": {
+        "version": "8ad39773abf835e961ff10e6c2f3b2e41227307d9299fb3ebe76e320c057c5ad",
+        "signature": "8ad39773abf835e961ff10e6c2f3b2e41227307d9299fb3ebe76e320c057c5ad",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal/util/trycatch.d.ts": {
+        "version": "fb102e1c90fd6607f8eb70a5011c9583b9443913e9d573203f7d1e56ff2f3321",
+        "signature": "fb102e1c90fd6607f8eb70a5011c9583b9443913e9d573203f7d1e56ff2f3321",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/rxjs/internal-compatibility/index.d.ts": {
+        "version": "fb4c549ba1f835e3ef368bf264ee277a24091651d18293ac1d55b319afd93801",
+        "signature": "fb4c549ba1f835e3ef368bf264ee277a24091651d18293ac1d55b319afd93801",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/all-categories.dto.ts": {
+        "version": "0e2a9a27bdbf894ac0e5919e6af1cda6d7b27f297cb863f2a5d493380cb00452",
+        "signature": "a652b23f018a9c3f374ae6c39a001a90168a8831f4a790ed62fdfca1098db648",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/dtos/restaurant.dto.ts": {
+        "version": "983a8d4851271861d814a0d22b09d49dc86eea05b2838311e2d8978dcefd3214",
+        "signature": "6e04ac09b85ab48ff7103a2f66b719b672855242a27b71d2177c006f09c8cef2",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/restaurants.service.ts": {
+        "version": "cbbeb3226bf676447ad1a0a03d4f3cfb7c0718403367cca4daf30491ce49c2ea",
+        "signature": "44129ce2dfd55ba52ece9571b1d73ef6e592cfa81689e5b69228fed040e00651",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/restaurants.resolver.ts": {
+        "version": "87694204b6c32f852006a280b8d81cf0b0fe9ba82a3aadb41ffff7fdede2d5de",
+        "signature": "e028cda74205a4f036b3ee22ed57fd2e36c98527f168b8692c781648a85bf286",
+        "affectsGlobalScope": false
+      },
+      "../src/restaurants/restaurants.module.ts": {
+        "version": "2f012be0606682885fd5cb8f6468354c3cd7f5908e6bb1c3623d359c20980f5b",
+        "signature": "126108b45b72bbade3b5733fa6e1dbc34c5b76e6615d9ed0ba1c24ea9275fb35",
         "affectsGlobalScope": false
       },
       "../src/jwt/jwt.interfaces.ts": {
@@ -5815,24 +6110,19 @@
         "signature": "787cadaf138acb766486f443bc5980e5bcd1d5bf4da8a8aafb4cd864f9bce62a",
         "affectsGlobalScope": false
       },
-      "../src/common/dtos/output.dto.ts": {
-        "version": "b232c826f847d1d16db4af9fa066394502b0c56b3757c89df8132692cd2f2b1a",
-        "signature": "3902088f28d17f80017f0aea701d2f58e41ef28c08ac04def6f469818023cc54",
-        "affectsGlobalScope": false
-      },
       "../src/users/dtos/create-account.dto.ts": {
         "version": "db07ade7ecf75d3841bdd1871301e86b3060095a8e0375ef4c2fec0b7dc5ee0f",
-        "signature": "09ef7c924877ce45efbbc9f7c7faeea6abfe4119dac8f62318addfa65fb0dbbb",
+        "signature": "ea1ae7bf7006e7df5c4742d813a0fb745b45cf89096190b7467da79814dc50ba",
         "affectsGlobalScope": false
       },
       "../src/users/dtos/edit-profile.dto.ts": {
         "version": "8625e0dcdc68f94bce5070b7015efc954831ebf1633a8d972264b8c24c9a38e0",
-        "signature": "4b28f05276054b51d8f33d2ce4107b6dd8c8f0e01bb0d243a96e97dfdddd6400",
+        "signature": "e1f5cff4f881dfe4841aafda83436764afa42e5a37053e271e17be499d19d48e",
         "affectsGlobalScope": false
       },
       "../src/users/dtos/login.dto.ts": {
         "version": "6efc21e06947379d7ed9e1aba0eecc01dd969eb22bb085a7ed0b275f6f943323",
-        "signature": "86650fdd18f979da7f75c76f91d2d5a4309ee1d9f7f2149d7a661078f1126712",
+        "signature": "a299ccbe9ebf08b8282b53e5d217651c5abfe3fe690f3bbf186635e93a58a85f",
         "affectsGlobalScope": false
       },
       "../src/users/dtos/user-profile.dto.ts": {
@@ -5855,18 +6145,8 @@
         "signature": "8bd79fb5409536c10150bce8f7f0c9c7fa6214935a4729e0a9ad18834a2d9e73",
         "affectsGlobalScope": false
       },
-      "../src/auth/auth.guard.ts": {
-        "version": "b1db165fd843fbfd899860bbc05b59aedfb7b9e0284cc6ff81193f98e3fd0ad3",
-        "signature": "89cbe528206d39a629cf5e072460519f1305bf844df942749e376a24a983d0dd",
-        "affectsGlobalScope": false
-      },
-      "../src/auth/auth-user.decorator.ts": {
-        "version": "1efcd7b984225e59e7273a4f38d96b6d5cce572fb1bb98123b406b3191e7c324",
-        "signature": "cd1e457df3b82a86ca479fcda6e01c8ff3874ebdbdc812db7f6734d8561f4788",
-        "affectsGlobalScope": false
-      },
       "../src/users/users.resolver.ts": {
-        "version": "68d78622d0085cbb91d7a40ffd3bbd47306a57a079a58c005794d2ccd04b98b0",
+        "version": "baeb30df98820ce42a20b5057756e31810afc075478e5e89de90680d1f4f50ab",
         "signature": "aeff7f7e5a658dcbccfa6197fa40f86613fe55c2bb8980bd919bc0c598dd4baa",
         "affectsGlobalScope": false
       },
@@ -5881,7 +6161,7 @@
         "affectsGlobalScope": false
       },
       "../src/jwt/jwt.middleware.ts": {
-        "version": "e2e050811d5be20588765247ed5d5596770897723950d205ab413f989e7600ee",
+        "version": "5d3e6a67a584e9dc7b4aa5d1cd809a667ee5905a78e3cad25290c923ef08169d",
         "signature": "515c76a447ed269f52f71dbb6f3330e591919b994f0a085b6826a59513d89928",
         "affectsGlobalScope": false
       },
@@ -5891,18 +6171,13 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "23131ecdc204bd29a6c14a3ed20623083b49ff38f97b6f84db8e69cbff3d0732",
+        "version": "f92eeed4d408c47f94ab84cc8878f3ec9b8659b710443f311893cb45c5677075",
         "signature": "afcce087cb1e36428ff98e4cf897a05ac9fe446c7d198f08b44be256415e2f0f",
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
         "version": "e25d9bd8f80b6ffbcc8826ed1b407e747e4fbe346c5bab62cbe5837da4eeb189",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../src/auth/auth.module.ts": {
-        "version": "da2b8b8660542a34ee4e2d234d69b83fa7e8143d62392ba8bffa94561e7d7b98",
-        "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
       "../src/common/common.module.ts": {
@@ -5913,36 +6188,6 @@
       "../src/mail/mail.constants.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/restaurants/entities/restaurant.entity.ts": {
-        "version": "28f093954f58493fc9cd1abb15fe007700d92b8bf523452a87ae0cd05797df97",
-        "signature": "a267135dd1ff070e41f3884587ee89524973a14b957a206394bd4626d6b5c70a",
-        "affectsGlobalScope": false
-      },
-      "../src/restaurants/dtos/create-restaurant.dto.ts": {
-        "version": "d329baaf4fabf8e906883623d19f6dcef80e527d7d94ba094c9934fb623fd3c7",
-        "signature": "e5ae97c6e3367640e13144e17a5db75a5cf66d7b21c7feaa775280e580b936a7",
-        "affectsGlobalScope": false
-      },
-      "../src/restaurants/dtos/update-restaurant.dto.ts": {
-        "version": "c46588f01f9fd20efc2fee635006bb85c2d52ef10f886807dfdeb40bcdfa2213",
-        "signature": "533221962675a5a34c6d64ca6fd0276062215bf5240012a24b3db8ff9877fcee",
-        "affectsGlobalScope": false
-      },
-      "../src/restaurants/restaurants.service.ts": {
-        "version": "12c7319ca3d3813f8189a2f1df95c68494b76ae74120f579a2cc584d213f525e",
-        "signature": "2f8e453eea43b6ba9d05bb6f00dcade58786d2c5f30314a54ca53c517fa2025a",
-        "affectsGlobalScope": false
-      },
-      "../src/restaurants/restaurants.resolver.ts": {
-        "version": "dbd18cc88dcf11e1e7e52491c67d38978ea220eefc7288abe014ac200dec5b07",
-        "signature": "479f4d70e764af4a90d6141e74f841ee16b502d98c75c88d84befb605896f6dc",
-        "affectsGlobalScope": false
-      },
-      "../src/restaurants/restaurants.module.ts": {
-        "version": "14faa153cf2f8e13fd2dcc1e6eed74094b5e3bf4881b8b789b1bc878cfadbeb7",
-        "signature": "126108b45b72bbade3b5733fa6e1dbc34c5b76e6615d9ed0ba1c24ea9275fb35",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -9729,6 +9974,66 @@
         "../node_modules/rxjs/internal/util/timeouterror.d.ts",
         "../node_modules/rxjs/internal/util/unsubscriptionerror.d.ts"
       ],
+      "../node_modules/rxjs/internal-compatibility/index.d.ts": [
+        "../node_modules/rxjs/internal/config.d.ts",
+        "../node_modules/rxjs/internal/innersubscriber.d.ts",
+        "../node_modules/rxjs/internal/observable/combinelatest.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/ajax.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/websocket.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts",
+        "../node_modules/rxjs/internal/observable/fromevent.d.ts",
+        "../node_modules/rxjs/internal/observable/fromiterable.d.ts",
+        "../node_modules/rxjs/internal/observable/frompromise.d.ts",
+        "../node_modules/rxjs/internal/observable/generate.d.ts",
+        "../node_modules/rxjs/internal/observable/range.d.ts",
+        "../node_modules/rxjs/internal/observable/subscribeonobservable.d.ts",
+        "../node_modules/rxjs/internal/operators/groupby.d.ts",
+        "../node_modules/rxjs/internal/operators/sharereplay.d.ts",
+        "../node_modules/rxjs/internal/operators/throttle.d.ts",
+        "../node_modules/rxjs/internal/operators/timeinterval.d.ts",
+        "../node_modules/rxjs/internal/operators/timestamp.d.ts",
+        "../node_modules/rxjs/internal/outersubscriber.d.ts",
+        "../node_modules/rxjs/internal/scheduler.d.ts",
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subjectsubscription.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/symbol/iterator.d.ts",
+        "../node_modules/rxjs/internal/symbol/observable.d.ts",
+        "../node_modules/rxjs/internal/symbol/rxsubscriber.d.ts",
+        "../node_modules/rxjs/internal/util/applymixins.d.ts",
+        "../node_modules/rxjs/internal/util/argumentoutofrangeerror.d.ts",
+        "../node_modules/rxjs/internal/util/emptyerror.d.ts",
+        "../node_modules/rxjs/internal/util/errorobject.d.ts",
+        "../node_modules/rxjs/internal/util/hostreporterror.d.ts",
+        "../node_modules/rxjs/internal/util/identity.d.ts",
+        "../node_modules/rxjs/internal/util/immediate.d.ts",
+        "../node_modules/rxjs/internal/util/isarray.d.ts",
+        "../node_modules/rxjs/internal/util/isarraylike.d.ts",
+        "../node_modules/rxjs/internal/util/isdate.d.ts",
+        "../node_modules/rxjs/internal/util/isfunction.d.ts",
+        "../node_modules/rxjs/internal/util/isinteropobservable.d.ts",
+        "../node_modules/rxjs/internal/util/isiterable.d.ts",
+        "../node_modules/rxjs/internal/util/isnumeric.d.ts",
+        "../node_modules/rxjs/internal/util/isobject.d.ts",
+        "../node_modules/rxjs/internal/util/ispromise.d.ts",
+        "../node_modules/rxjs/internal/util/isscheduler.d.ts",
+        "../node_modules/rxjs/internal/util/noop.d.ts",
+        "../node_modules/rxjs/internal/util/not.d.ts",
+        "../node_modules/rxjs/internal/util/objectunsubscribederror.d.ts",
+        "../node_modules/rxjs/internal/util/pipe.d.ts",
+        "../node_modules/rxjs/internal/util/root.d.ts",
+        "../node_modules/rxjs/internal/util/subscribeto.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoarray.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoiterable.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoobservable.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetopromise.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoresult.d.ts",
+        "../node_modules/rxjs/internal/util/timeouterror.d.ts",
+        "../node_modules/rxjs/internal/util/tosubscriber.d.ts",
+        "../node_modules/rxjs/internal/util/trycatch.d.ts",
+        "../node_modules/rxjs/internal/util/unsubscriptionerror.d.ts"
+      ],
       "../node_modules/rxjs/internal/asyncsubject.d.ts": [
         "../node_modules/rxjs/internal/subject.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts",
@@ -9784,6 +10089,25 @@
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/observable/dom/ajax.d.ts": [
+        "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/dom/websocket.d.ts": [
+        "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/observable/empty.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
@@ -9802,6 +10126,14 @@
       "../node_modules/rxjs/internal/observable/fromeventpattern.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/observable/fromevent.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/fromiterable.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/frompromise.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/rxjs/internal/observable/generate.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
@@ -9851,6 +10183,12 @@
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/observable/subscribeonobservable.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/observable/throwerror.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
@@ -9878,6 +10216,18 @@
         "../node_modules/rxjs/internal/subject.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throttle.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/rxjs/internal/outersubscriber.d.ts": [
@@ -9952,6 +10302,11 @@
         "../node_modules/rxjs/internal/subscription.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/subjectsubscription.d.ts": [
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/subscriber.d.ts": [
         "../node_modules/rxjs/internal/subscription.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
@@ -9963,10 +10318,42 @@
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts"
       ],
+      "../node_modules/rxjs/internal/util/isinteropobservable.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/util/isobservable.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts"
       ],
+      "../node_modules/rxjs/internal/util/isscheduler.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribeto.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoarray.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoiterable.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoobservable.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetopromise.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoresult.d.ts": [
+        "../node_modules/rxjs/internal/innersubscriber.d.ts",
+        "../node_modules/rxjs/internal/outersubscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/tosubscriber.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/subscriptions-transport-ws/dist/client.d.ts": [
@@ -11086,9 +11473,13 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/joi/lib/index.d.ts",
+        "../src/auth/auth.module.ts",
         "../src/jwt/jwt.middleware.ts",
         "../src/jwt/jwt.module.ts",
         "../src/mail/mail.module.ts",
+        "../src/restaurants/entities/category.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts",
+        "../src/restaurants/restaurants.module.ts",
         "../src/users/entities/user.entity.ts",
         "../src/users/entities/verification.entity.ts",
         "../src/users/users.module.ts"
@@ -11099,10 +11490,19 @@
       ],
       "../src/auth/auth.guard.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/graphql/index.d.ts"
+        "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/auth/role.decorator.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/auth/auth.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/core/index.d.ts",
+        "../src/auth/auth.guard.ts"
+      ],
+      "../src/auth/role.decorator.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/common/common.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -11149,40 +11549,112 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts"
       ],
-      "../src/restaurants/dtos/create-restaurant.dto.ts": [
+      "../src/restaurants/dtos/all-categories.dto.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/entities/category.entity.ts"
+      ],
+      "../src/restaurants/dtos/category.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/dtos/pagination.dto.ts",
+        "../src/restaurants/entities/category.entity.ts",
         "../src/restaurants/entities/restaurant.entity.ts"
       ],
-      "../src/restaurants/dtos/update-restaurant.dto.ts": [
+      "../src/restaurants/dtos/create-restaurant.dto.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/dtos/delete-restaurant.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts"
+      ],
+      "../src/restaurants/dtos/edit-restaurant.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
         "../src/restaurants/dtos/create-restaurant.dto.ts"
+      ],
+      "../src/restaurants/dtos/pagination.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts"
+      ],
+      "../src/restaurants/dtos/restaurant.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/dtos/restaurants.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/restaurants/dtos/pagination.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/dtos/search-restaurant.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/restaurants/dtos/pagination.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/entities/category.entity.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/common/entities/core.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
       ],
       "../src/restaurants/entities/restaurant.entity.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/class-validator/types/index.d.ts",
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/common/entities/core.entity.ts",
+        "../src/restaurants/entities/category.entity.ts",
+        "../src/users/entities/user.entity.ts"
+      ],
+      "../src/restaurants/repositories/category.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/restaurants/entities/category.entity.ts"
       ],
       "../src/restaurants/restaurants.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../src/restaurants/entities/restaurant.entity.ts",
+        "../src/restaurants/repositories/category.repository.ts",
         "../src/restaurants/restaurants.resolver.ts",
         "../src/restaurants/restaurants.service.ts"
       ],
       "../src/restaurants/restaurants.resolver.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/auth/auth-user.decorator.ts",
+        "../src/auth/role.decorator.ts",
+        "../src/restaurants/dtos/all-categories.dto.ts",
+        "../src/restaurants/dtos/category.dto.ts",
         "../src/restaurants/dtos/create-restaurant.dto.ts",
-        "../src/restaurants/dtos/update-restaurant.dto.ts",
+        "../src/restaurants/dtos/delete-restaurant.dto.ts",
+        "../src/restaurants/dtos/edit-restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurants.dto.ts",
+        "../src/restaurants/dtos/search-restaurant.dto.ts",
+        "../src/restaurants/entities/category.entity.ts",
         "../src/restaurants/entities/restaurant.entity.ts",
-        "../src/restaurants/restaurants.service.ts"
+        "../src/restaurants/restaurants.service.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/restaurants/restaurants.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/rxjs/internal-compatibility/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/restaurants/dtos/all-categories.dto.ts",
+        "../src/restaurants/dtos/category.dto.ts",
         "../src/restaurants/dtos/create-restaurant.dto.ts",
-        "../src/restaurants/dtos/update-restaurant.dto.ts",
-        "../src/restaurants/entities/restaurant.entity.ts"
+        "../src/restaurants/dtos/delete-restaurant.dto.ts",
+        "../src/restaurants/dtos/edit-restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurants.dto.ts",
+        "../src/restaurants/dtos/search-restaurant.dto.ts",
+        "../src/restaurants/entities/category.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts",
+        "../src/restaurants/repositories/category.repository.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/users/dtos/create-account.dto.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
@@ -11215,7 +11687,8 @@
         "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/class-validator/types/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/common/entities/core.entity.ts"
+        "../src/common/entities/core.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
       ],
       "../src/users/entities/verification.entity.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
@@ -11236,6 +11709,7 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../src/auth/auth-user.decorator.ts",
         "../src/auth/auth.guard.ts",
+        "../src/auth/role.decorator.ts",
         "../src/users/dtos/create-account.dto.ts",
         "../src/users/dtos/edit-profile.dto.ts",
         "../src/users/dtos/login.dto.ts",
@@ -14735,6 +15209,66 @@
         "../node_modules/rxjs/internal/util/timeouterror.d.ts",
         "../node_modules/rxjs/internal/util/unsubscriptionerror.d.ts"
       ],
+      "../node_modules/rxjs/internal-compatibility/index.d.ts": [
+        "../node_modules/rxjs/internal/config.d.ts",
+        "../node_modules/rxjs/internal/innersubscriber.d.ts",
+        "../node_modules/rxjs/internal/observable/combinelatest.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/ajax.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/websocket.d.ts",
+        "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts",
+        "../node_modules/rxjs/internal/observable/fromevent.d.ts",
+        "../node_modules/rxjs/internal/observable/fromiterable.d.ts",
+        "../node_modules/rxjs/internal/observable/frompromise.d.ts",
+        "../node_modules/rxjs/internal/observable/generate.d.ts",
+        "../node_modules/rxjs/internal/observable/range.d.ts",
+        "../node_modules/rxjs/internal/observable/subscribeonobservable.d.ts",
+        "../node_modules/rxjs/internal/operators/groupby.d.ts",
+        "../node_modules/rxjs/internal/operators/sharereplay.d.ts",
+        "../node_modules/rxjs/internal/operators/throttle.d.ts",
+        "../node_modules/rxjs/internal/operators/timeinterval.d.ts",
+        "../node_modules/rxjs/internal/operators/timestamp.d.ts",
+        "../node_modules/rxjs/internal/outersubscriber.d.ts",
+        "../node_modules/rxjs/internal/scheduler.d.ts",
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subjectsubscription.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/symbol/iterator.d.ts",
+        "../node_modules/rxjs/internal/symbol/observable.d.ts",
+        "../node_modules/rxjs/internal/symbol/rxsubscriber.d.ts",
+        "../node_modules/rxjs/internal/util/applymixins.d.ts",
+        "../node_modules/rxjs/internal/util/argumentoutofrangeerror.d.ts",
+        "../node_modules/rxjs/internal/util/emptyerror.d.ts",
+        "../node_modules/rxjs/internal/util/errorobject.d.ts",
+        "../node_modules/rxjs/internal/util/hostreporterror.d.ts",
+        "../node_modules/rxjs/internal/util/identity.d.ts",
+        "../node_modules/rxjs/internal/util/immediate.d.ts",
+        "../node_modules/rxjs/internal/util/isarray.d.ts",
+        "../node_modules/rxjs/internal/util/isarraylike.d.ts",
+        "../node_modules/rxjs/internal/util/isdate.d.ts",
+        "../node_modules/rxjs/internal/util/isfunction.d.ts",
+        "../node_modules/rxjs/internal/util/isinteropobservable.d.ts",
+        "../node_modules/rxjs/internal/util/isiterable.d.ts",
+        "../node_modules/rxjs/internal/util/isnumeric.d.ts",
+        "../node_modules/rxjs/internal/util/isobject.d.ts",
+        "../node_modules/rxjs/internal/util/ispromise.d.ts",
+        "../node_modules/rxjs/internal/util/isscheduler.d.ts",
+        "../node_modules/rxjs/internal/util/noop.d.ts",
+        "../node_modules/rxjs/internal/util/not.d.ts",
+        "../node_modules/rxjs/internal/util/objectunsubscribederror.d.ts",
+        "../node_modules/rxjs/internal/util/pipe.d.ts",
+        "../node_modules/rxjs/internal/util/root.d.ts",
+        "../node_modules/rxjs/internal/util/subscribeto.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoarray.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoiterable.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoobservable.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetopromise.d.ts",
+        "../node_modules/rxjs/internal/util/subscribetoresult.d.ts",
+        "../node_modules/rxjs/internal/util/timeouterror.d.ts",
+        "../node_modules/rxjs/internal/util/tosubscriber.d.ts",
+        "../node_modules/rxjs/internal/util/trycatch.d.ts",
+        "../node_modules/rxjs/internal/util/unsubscriptionerror.d.ts"
+      ],
       "../node_modules/rxjs/internal/asyncsubject.d.ts": [
         "../node_modules/rxjs/internal/subject.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts",
@@ -14790,6 +15324,25 @@
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/observable/dom/ajax.d.ts": [
+        "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/dom/websocket.d.ts": [
+        "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/operator.d.ts",
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/observable/empty.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
@@ -14808,6 +15361,14 @@
       "../node_modules/rxjs/internal/observable/fromeventpattern.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/observable/fromevent.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/fromiterable.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/observable/frompromise.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/rxjs/internal/observable/generate.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
@@ -14857,6 +15418,12 @@
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/observable/subscribeonobservable.d.ts": [
+        "../node_modules/rxjs/internal/observable.d.ts",
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/observable/throwerror.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
@@ -14884,6 +15451,18 @@
         "../node_modules/rxjs/internal/subject.d.ts",
         "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/throttle.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/rxjs/internal/outersubscriber.d.ts": [
@@ -14958,6 +15537,11 @@
         "../node_modules/rxjs/internal/subscription.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/rxjs/internal/subjectsubscription.d.ts": [
+        "../node_modules/rxjs/internal/subject.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/subscriber.d.ts": [
         "../node_modules/rxjs/internal/subscription.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
@@ -14969,10 +15553,42 @@
         "../node_modules/rxjs/internal/observable.d.ts",
         "../node_modules/rxjs/internal/subscription.d.ts"
       ],
+      "../node_modules/rxjs/internal/util/isinteropobservable.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/util/isobservable.d.ts": [
         "../node_modules/rxjs/internal/observable.d.ts"
       ],
+      "../node_modules/rxjs/internal/util/isscheduler.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribeto.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts",
+        "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoarray.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoiterable.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoobservable.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetopromise.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/subscribetoresult.d.ts": [
+        "../node_modules/rxjs/internal/innersubscriber.d.ts",
+        "../node_modules/rxjs/internal/outersubscriber.d.ts",
+        "../node_modules/rxjs/internal/subscription.d.ts"
+      ],
+      "../node_modules/rxjs/internal/util/tosubscriber.d.ts": [
+        "../node_modules/rxjs/internal/subscriber.d.ts",
         "../node_modules/rxjs/internal/types.d.ts"
       ],
       "../node_modules/subscriptions-transport-ws/dist/client.d.ts": [
@@ -16090,7 +16706,12 @@
         "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/auth/auth.guard.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/core/index.d.ts"
+      ],
+      "../src/auth/role.decorator.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/jwt/jwt.middleware.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -16112,25 +16733,83 @@
       "../src/mail/mail.service.ts": [
         "../src/mail/mail.interfaces.ts"
       ],
-      "../src/restaurants/dtos/create-restaurant.dto.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
+      "../src/restaurants/dtos/all-categories.dto.ts": [
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/entities/category.entity.ts"
+      ],
+      "../src/restaurants/dtos/category.dto.ts": [
+        "../src/restaurants/dtos/pagination.dto.ts",
+        "../src/restaurants/entities/category.entity.ts",
         "../src/restaurants/entities/restaurant.entity.ts"
       ],
-      "../src/restaurants/dtos/update-restaurant.dto.ts": [
+      "../src/restaurants/dtos/create-restaurant.dto.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/dtos/delete-restaurant.dto.ts": [
+        "../src/common/dtos/output.dto.ts"
+      ],
+      "../src/restaurants/dtos/edit-restaurant.dto.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/common/dtos/output.dto.ts",
         "../src/restaurants/dtos/create-restaurant.dto.ts"
       ],
+      "../src/restaurants/dtos/pagination.dto.ts": [
+        "../src/common/dtos/output.dto.ts"
+      ],
+      "../src/restaurants/dtos/restaurant.dto.ts": [
+        "../src/common/dtos/output.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/dtos/restaurants.dto.ts": [
+        "../src/restaurants/dtos/pagination.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/dtos/search-restaurant.dto.ts": [
+        "../src/restaurants/dtos/pagination.dto.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/entities/category.entity.ts": [
+        "../src/common/entities/core.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
+      ],
+      "../src/restaurants/entities/restaurant.entity.ts": [
+        "../src/common/entities/core.entity.ts",
+        "../src/restaurants/entities/category.entity.ts",
+        "../src/users/entities/user.entity.ts"
+      ],
+      "../src/restaurants/repositories/category.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/restaurants/entities/category.entity.ts"
+      ],
       "../src/restaurants/restaurants.resolver.ts": [
+        "../src/restaurants/dtos/all-categories.dto.ts",
+        "../src/restaurants/dtos/category.dto.ts",
         "../src/restaurants/dtos/create-restaurant.dto.ts",
-        "../src/restaurants/dtos/update-restaurant.dto.ts",
-        "../src/restaurants/entities/restaurant.entity.ts",
-        "../src/restaurants/restaurants.service.ts"
+        "../src/restaurants/dtos/delete-restaurant.dto.ts",
+        "../src/restaurants/dtos/edit-restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurants.dto.ts",
+        "../src/restaurants/dtos/search-restaurant.dto.ts",
+        "../src/restaurants/entities/category.entity.ts",
+        "../src/restaurants/restaurants.service.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/restaurants/restaurants.service.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/restaurants/dtos/all-categories.dto.ts",
+        "../src/restaurants/dtos/category.dto.ts",
         "../src/restaurants/dtos/create-restaurant.dto.ts",
-        "../src/restaurants/dtos/update-restaurant.dto.ts",
-        "../src/restaurants/entities/restaurant.entity.ts"
+        "../src/restaurants/dtos/delete-restaurant.dto.ts",
+        "../src/restaurants/dtos/edit-restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurant.dto.ts",
+        "../src/restaurants/dtos/restaurants.dto.ts",
+        "../src/restaurants/dtos/search-restaurant.dto.ts",
+        "../src/restaurants/entities/category.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts",
+        "../src/restaurants/repositories/category.repository.ts",
+        "../src/users/entities/user.entity.ts"
       ],
       "../src/users/dtos/create-account.dto.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -16157,7 +16836,8 @@
         "../src/users/entities/verification.entity.ts"
       ],
       "../src/users/entities/user.entity.ts": [
-        "../src/common/entities/core.entity.ts"
+        "../src/common/entities/core.entity.ts",
+        "../src/restaurants/entities/restaurant.entity.ts"
       ],
       "../src/users/entities/verification.entity.ts": [
         "../src/common/entities/core.entity.ts",
@@ -17035,6 +17715,7 @@
       "../node_modules/pretty-format/build/types.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/rxjs/index.d.ts",
+      "../node_modules/rxjs/internal-compatibility/index.d.ts",
       "../node_modules/rxjs/internal/asyncsubject.d.ts",
       "../node_modules/rxjs/internal/behaviorsubject.d.ts",
       "../node_modules/rxjs/internal/config.d.ts",
@@ -17047,11 +17728,17 @@
       "../node_modules/rxjs/internal/observable/concat.d.ts",
       "../node_modules/rxjs/internal/observable/connectableobservable.d.ts",
       "../node_modules/rxjs/internal/observable/defer.d.ts",
+      "../node_modules/rxjs/internal/observable/dom/ajax.d.ts",
+      "../node_modules/rxjs/internal/observable/dom/ajaxobservable.d.ts",
+      "../node_modules/rxjs/internal/observable/dom/websocket.d.ts",
+      "../node_modules/rxjs/internal/observable/dom/websocketsubject.d.ts",
       "../node_modules/rxjs/internal/observable/empty.d.ts",
       "../node_modules/rxjs/internal/observable/forkjoin.d.ts",
       "../node_modules/rxjs/internal/observable/from.d.ts",
       "../node_modules/rxjs/internal/observable/fromevent.d.ts",
       "../node_modules/rxjs/internal/observable/fromeventpattern.d.ts",
+      "../node_modules/rxjs/internal/observable/fromiterable.d.ts",
+      "../node_modules/rxjs/internal/observable/frompromise.d.ts",
       "../node_modules/rxjs/internal/observable/generate.d.ts",
       "../node_modules/rxjs/internal/observable/iif.d.ts",
       "../node_modules/rxjs/internal/observable/interval.d.ts",
@@ -17063,12 +17750,17 @@
       "../node_modules/rxjs/internal/observable/partition.d.ts",
       "../node_modules/rxjs/internal/observable/race.d.ts",
       "../node_modules/rxjs/internal/observable/range.d.ts",
+      "../node_modules/rxjs/internal/observable/subscribeonobservable.d.ts",
       "../node_modules/rxjs/internal/observable/throwerror.d.ts",
       "../node_modules/rxjs/internal/observable/timer.d.ts",
       "../node_modules/rxjs/internal/observable/using.d.ts",
       "../node_modules/rxjs/internal/observable/zip.d.ts",
       "../node_modules/rxjs/internal/operator.d.ts",
       "../node_modules/rxjs/internal/operators/groupby.d.ts",
+      "../node_modules/rxjs/internal/operators/sharereplay.d.ts",
+      "../node_modules/rxjs/internal/operators/throttle.d.ts",
+      "../node_modules/rxjs/internal/operators/timeinterval.d.ts",
+      "../node_modules/rxjs/internal/operators/timestamp.d.ts",
       "../node_modules/rxjs/internal/outersubscriber.d.ts",
       "../node_modules/rxjs/internal/replaysubject.d.ts",
       "../node_modules/rxjs/internal/scheduled/scheduled.d.ts",
@@ -17085,18 +17777,45 @@
       "../node_modules/rxjs/internal/scheduler/queuescheduler.d.ts",
       "../node_modules/rxjs/internal/scheduler/virtualtimescheduler.d.ts",
       "../node_modules/rxjs/internal/subject.d.ts",
+      "../node_modules/rxjs/internal/subjectsubscription.d.ts",
       "../node_modules/rxjs/internal/subscriber.d.ts",
       "../node_modules/rxjs/internal/subscription.d.ts",
+      "../node_modules/rxjs/internal/symbol/iterator.d.ts",
       "../node_modules/rxjs/internal/symbol/observable.d.ts",
+      "../node_modules/rxjs/internal/symbol/rxsubscriber.d.ts",
       "../node_modules/rxjs/internal/types.d.ts",
+      "../node_modules/rxjs/internal/util/applymixins.d.ts",
       "../node_modules/rxjs/internal/util/argumentoutofrangeerror.d.ts",
       "../node_modules/rxjs/internal/util/emptyerror.d.ts",
+      "../node_modules/rxjs/internal/util/errorobject.d.ts",
+      "../node_modules/rxjs/internal/util/hostreporterror.d.ts",
       "../node_modules/rxjs/internal/util/identity.d.ts",
+      "../node_modules/rxjs/internal/util/immediate.d.ts",
+      "../node_modules/rxjs/internal/util/isarray.d.ts",
+      "../node_modules/rxjs/internal/util/isarraylike.d.ts",
+      "../node_modules/rxjs/internal/util/isdate.d.ts",
+      "../node_modules/rxjs/internal/util/isfunction.d.ts",
+      "../node_modules/rxjs/internal/util/isinteropobservable.d.ts",
+      "../node_modules/rxjs/internal/util/isiterable.d.ts",
+      "../node_modules/rxjs/internal/util/isnumeric.d.ts",
+      "../node_modules/rxjs/internal/util/isobject.d.ts",
       "../node_modules/rxjs/internal/util/isobservable.d.ts",
+      "../node_modules/rxjs/internal/util/ispromise.d.ts",
+      "../node_modules/rxjs/internal/util/isscheduler.d.ts",
       "../node_modules/rxjs/internal/util/noop.d.ts",
+      "../node_modules/rxjs/internal/util/not.d.ts",
       "../node_modules/rxjs/internal/util/objectunsubscribederror.d.ts",
       "../node_modules/rxjs/internal/util/pipe.d.ts",
+      "../node_modules/rxjs/internal/util/root.d.ts",
+      "../node_modules/rxjs/internal/util/subscribeto.d.ts",
+      "../node_modules/rxjs/internal/util/subscribetoarray.d.ts",
+      "../node_modules/rxjs/internal/util/subscribetoiterable.d.ts",
+      "../node_modules/rxjs/internal/util/subscribetoobservable.d.ts",
+      "../node_modules/rxjs/internal/util/subscribetopromise.d.ts",
+      "../node_modules/rxjs/internal/util/subscribetoresult.d.ts",
       "../node_modules/rxjs/internal/util/timeouterror.d.ts",
+      "../node_modules/rxjs/internal/util/tosubscriber.d.ts",
+      "../node_modules/rxjs/internal/util/trycatch.d.ts",
       "../node_modules/rxjs/internal/util/unsubscriptionerror.d.ts",
       "../node_modules/source-map/source-map.d.ts",
       "../node_modules/subscriptions-transport-ws/dist/client.d.ts",
@@ -17404,6 +18123,7 @@
       "../src/auth/auth-user.decorator.ts",
       "../src/auth/auth.guard.ts",
       "../src/auth/auth.module.ts",
+      "../src/auth/role.decorator.ts",
       "../src/common/common.constants.ts",
       "../src/common/common.module.ts",
       "../src/common/dtos/output.dto.ts",
@@ -17417,9 +18137,18 @@
       "../src/mail/mail.module.ts",
       "../src/mail/mail.service.ts",
       "../src/main.ts",
+      "../src/restaurants/dtos/all-categories.dto.ts",
+      "../src/restaurants/dtos/category.dto.ts",
       "../src/restaurants/dtos/create-restaurant.dto.ts",
-      "../src/restaurants/dtos/update-restaurant.dto.ts",
+      "../src/restaurants/dtos/delete-restaurant.dto.ts",
+      "../src/restaurants/dtos/edit-restaurant.dto.ts",
+      "../src/restaurants/dtos/pagination.dto.ts",
+      "../src/restaurants/dtos/restaurant.dto.ts",
+      "../src/restaurants/dtos/restaurants.dto.ts",
+      "../src/restaurants/dtos/search-restaurant.dto.ts",
+      "../src/restaurants/entities/category.entity.ts",
       "../src/restaurants/entities/restaurant.entity.ts",
+      "../src/restaurants/repositories/category.repository.ts",
       "../src/restaurants/restaurants.module.ts",
       "../src/restaurants/restaurants.resolver.ts",
       "../src/restaurants/restaurants.service.ts",

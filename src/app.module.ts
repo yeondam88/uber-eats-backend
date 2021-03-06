@@ -9,6 +9,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 
 import * as Joi from 'joi';
+import { AuthModule } from 'src/auth/auth.module';
+import { Category } from 'src/restaurants/entities/category.entity';
+import { Restaurant } from 'src/restaurants/entities/restaurant.entity';
+import { RestaurantsModule } from 'src/restaurants/restaurants.module';
 import { UsersModule } from './users/users.module';
 import { User } from './users/entities/user.entity';
 import { JwtModule } from './jwt/jwt.module';
@@ -45,7 +49,7 @@ import { MailModule } from './mail/mail.module';
       synchronize: process.env.NODE_ENV !== 'prod',
       logging:
         process.env.NODE_ENV !== 'prod' && process.env.NODE_ENV !== 'test',
-      entities: [User, Verification],
+      entities: [User, Verification, Restaurant, Category],
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
@@ -61,7 +65,9 @@ import { MailModule } from './mail/mail.module';
       domain: process.env.MAILGUN_DOMAIN,
       fromEmail: process.env.MAILGUN_FROM_EMAIL,
     }),
+    AuthModule,
     UsersModule,
+    RestaurantsModule,
   ],
   controllers: [],
   providers: [],
@@ -69,7 +75,7 @@ import { MailModule } from './mail/mail.module';
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): any {
     consumer.apply(JwtMiddleware).forRoutes({
-      path: '*',
+      path: '/graphql',
       method: RequestMethod.POST,
     });
   }

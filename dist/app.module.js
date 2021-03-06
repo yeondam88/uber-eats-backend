@@ -12,6 +12,10 @@ const graphql_1 = require("@nestjs/graphql");
 const typeorm_1 = require("@nestjs/typeorm");
 const config_1 = require("@nestjs/config");
 const Joi = require("joi");
+const auth_module_1 = require("./auth/auth.module");
+const category_entity_1 = require("./restaurants/entities/category.entity");
+const restaurant_entity_1 = require("./restaurants/entities/restaurant.entity");
+const restaurants_module_1 = require("./restaurants/restaurants.module");
 const users_module_1 = require("./users/users.module");
 const user_entity_1 = require("./users/entities/user.entity");
 const jwt_module_1 = require("./jwt/jwt.module");
@@ -21,7 +25,7 @@ const mail_module_1 = require("./mail/mail.module");
 let AppModule = class AppModule {
     configure(consumer) {
         consumer.apply(jwt_middleware_1.JwtMiddleware).forRoutes({
-            path: '*',
+            path: '/graphql',
             method: common_1.RequestMethod.POST,
         });
     }
@@ -55,7 +59,7 @@ AppModule = __decorate([
                 database: process.env.DB_NAME,
                 synchronize: process.env.NODE_ENV !== 'prod',
                 logging: process.env.NODE_ENV !== 'prod' && process.env.NODE_ENV !== 'test',
-                entities: [user_entity_1.User, verification_entity_1.Verification],
+                entities: [user_entity_1.User, verification_entity_1.Verification, restaurant_entity_1.Restaurant, category_entity_1.Category],
             }),
             graphql_1.GraphQLModule.forRoot({
                 autoSchemaFile: true,
@@ -71,7 +75,9 @@ AppModule = __decorate([
                 domain: process.env.MAILGUN_DOMAIN,
                 fromEmail: process.env.MAILGUN_FROM_EMAIL,
             }),
+            auth_module_1.AuthModule,
             users_module_1.UsersModule,
+            restaurants_module_1.RestaurantsModule,
         ],
         controllers: [],
         providers: [],

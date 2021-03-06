@@ -19,12 +19,14 @@ let JwtMiddleware = class JwtMiddleware {
         this.usersServices = usersServices;
     }
     async use(req, res, next) {
+        console.log(req.headers['x-jwt']);
         if ('x-jwt' in req.headers) {
             const token = req.headers['x-jwt'];
             try {
                 const decoded = this.jwtService.verify(token.toString());
                 if (typeof decoded === 'object' && decoded.hasOwnProperty('id')) {
                     const { user } = await this.usersServices.findById(decoded['id']);
+                    console.log(user);
                     req['user'] = user;
                 }
             }

@@ -9,7 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = void 0;
+exports.User = exports.UserRole = void 0;
+const restaurant_entity_1 = require("../../restaurants/entities/restaurant.entity");
 const index_1 = require("typeorm/index");
 const class_validator_1 = require("class-validator");
 const core_entity_1 = require("../../common/entities/core.entity");
@@ -18,10 +19,10 @@ const bcrypt = require("bcrypt");
 const common_1 = require("@nestjs/common");
 var UserRole;
 (function (UserRole) {
-    UserRole[UserRole["Client"] = 0] = "Client";
-    UserRole[UserRole["Owner"] = 1] = "Owner";
-    UserRole[UserRole["Delivery"] = 2] = "Delivery";
-})(UserRole || (UserRole = {}));
+    UserRole["Client"] = "Client";
+    UserRole["Owner"] = "Owner";
+    UserRole["Delivery"] = "Delivery";
+})(UserRole = exports.UserRole || (exports.UserRole = {}));
 graphql_1.registerEnumType(UserRole, { name: 'UserRole' });
 let User = class User extends core_entity_1.CoreEntity {
     async hashPassword() {
@@ -64,13 +65,19 @@ __decorate([
     }),
     graphql_1.Field(() => UserRole),
     class_validator_1.IsEnum(UserRole),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], User.prototype, "role", void 0);
 __decorate([
     index_1.Column({ default: false }),
     graphql_1.Field(() => Boolean),
+    class_validator_1.IsBoolean(),
     __metadata("design:type", Boolean)
 ], User.prototype, "verified", void 0);
+__decorate([
+    graphql_1.Field(() => [restaurant_entity_1.Restaurant]),
+    index_1.OneToMany(() => restaurant_entity_1.Restaurant, (Restaurant) => Restaurant.owner),
+    __metadata("design:type", Array)
+], User.prototype, "restaurants", void 0);
 __decorate([
     index_1.BeforeInsert(),
     index_1.BeforeUpdate(),
@@ -79,7 +86,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], User.prototype, "hashPassword", null);
 User = __decorate([
-    graphql_1.InputType({
+    graphql_1.InputType('UserInputType', {
         isAbstract: true,
     }),
     graphql_1.ObjectType(),
