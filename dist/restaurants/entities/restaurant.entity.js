@@ -16,6 +16,7 @@ const category_entity_1 = require("./category.entity");
 const index_1 = require("typeorm/index");
 const class_validator_1 = require("class-validator");
 const user_entity_1 = require("../../users/entities/user.entity");
+const dish_entity_1 = require("./dish.entity");
 let Restaurant = class Restaurant extends core_entity_1.CoreEntity {
 };
 __decorate([
@@ -54,6 +55,11 @@ __decorate([
     index_1.RelationId((restaurant) => restaurant.owner),
     __metadata("design:type", Number)
 ], Restaurant.prototype, "ownerId", void 0);
+__decorate([
+    graphql_1.Field(() => [dish_entity_1.Dish]),
+    index_1.OneToMany(() => dish_entity_1.Dish, (dish) => dish.restaurant),
+    __metadata("design:type", Array)
+], Restaurant.prototype, "menu", void 0);
 Restaurant = __decorate([
     graphql_1.InputType('RestaurantInputType', { isAbstract: true }),
     graphql_1.ObjectType(),

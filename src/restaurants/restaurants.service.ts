@@ -7,9 +7,21 @@ import {
   CategoryOutput,
 } from 'src/restaurants/dtos/category.dto';
 import {
+  CreateDishInput,
+  CreateDishOutput,
+} from 'src/restaurants/dtos/create-dish.dto';
+import {
+  DeleteDishInput,
+  DeleteDishOutput,
+} from 'src/restaurants/dtos/delete-dish.dto';
+import {
   DeleteRestaurantInput,
   DeleteRestaurantOutput,
 } from 'src/restaurants/dtos/delete-restaurant.dto';
+import {
+  EditDishInput,
+  EditDishOutput,
+} from 'src/restaurants/dtos/edit-dish.dto';
 import {
   EditRestaurantInput,
   EditRestaurantOutput,
@@ -35,6 +47,7 @@ import {
 } from './dtos/create-restaurant.dto';
 import { Restaurant } from './entities/restaurant.entity';
 import { CategoryRepository } from 'src/restaurants/repositories/category.repository';
+import { Dish } from './entities/dish.entity';
 
 @Injectable()
 export class RestaurantsService {
@@ -42,6 +55,8 @@ export class RestaurantsService {
     @InjectRepository(Restaurant)
     private readonly restaurants: Repository<Restaurant>,
     private readonly categories: CategoryRepository,
+    @InjectRepository(Dish)
+    private readonly dishes: Repository<Dish>,
   ) {}
 
   async createRestaurant(
@@ -233,7 +248,9 @@ export class RestaurantsService {
     restaurantId,
   }: RestaurantInput): Promise<RestaurantOutput> {
     try {
-      const restaurant = await this.restaurants.findOne(restaurantId);
+      const restaurant = await this.restaurants.findOne(restaurantId, {
+        relations: ['menu'],
+      });
       if (!restaurant) {
         return {
           ok: false,
@@ -275,6 +292,110 @@ export class RestaurantsService {
       return {
         ok: false,
         error: 'Could not search for restaurant',
+      };
+    }
+  }
+
+  async createDish(
+    owner: User,
+    createDishInput: CreateDishInput,
+  ): Promise<CreateDishOutput> {
+    try {
+      const restaurant = await this.restaurants.findOne(
+        createDishInput.restaurantId,
+      );
+      if (!restaurant) {
+        return {
+          ok: false,
+          error: 'Restaurant not found!',
+        };
+      }
+      if (owner.id !== restaurant.ownerId) {
+        return {
+          ok: false,
+          error: 'You are not authorized to create a dish',
+        };
+      }
+      await this.dishes.save(
+        this.dishes.create({ ...createDishInput, restaurant }),
+      );
+      return {
+        ok: true,
+      };
+    } catch (err) {
+      console.log(err);
+      return {
+        ok: false,
+        error: 'Could not create a dish',
+      };
+    }
+  }
+
+  async checkDishOwner(ownerId: number, dishId: number) {
+    const dish = await this.dishes.findOne(dishId, {
+      relations: ['restaurant'],
+    });
+
+    return dish.restaurant.ownerId === ownerId;
+  }
+
+  async editDish(
+    owner: User,
+    editDishInput: EditDishInput,
+  ): Promise<EditDishOutput> {
+    try {
+      const isOwner = await this.checkDishOwner(owner.id, editDishInput.dishId);
+      if (!isOwner) {
+        return {
+          ok: false,
+          error: "Don't authorized do delete the dish",
+        };
+      }
+      await this.dishes.save([
+        {
+          id: editDishInput.dishId,
+          ...editDishInput,
+        },
+      ]);
+      return {
+        ok: true,
+      };
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async deleteDish(
+    owner: User,
+    deleteDishInput: DeleteDishInput,
+  ): Promise<DeleteDishOutput> {
+    try {
+      const dish = await this.dishes.findOne(deleteDishInput.dishId);
+      console.log(dish);
+      if (!dish) {
+        return {
+          ok: false,
+          error: 'Dish is not found!',
+        };
+      }
+      const isOwner = this.checkDishOwner(owner.id, deleteDishInput.dishId);
+      if (!isOwner) {
+        return {
+          ok: false,
+          error: "Don't authorized do delete the dish",
+        };
+      }
+
+      await this.dishes.delete(deleteDishInput.dishId);
+
+      return {
+        ok: true,
+      };
+    } catch (err) {
+      console.log(err);
+      return {
+        ok: false,
+        error: 'Dish is not deleted!',
       };
     }
   }

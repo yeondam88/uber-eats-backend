@@ -17,7 +17,10 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const all_categories_dto_1 = require("./dtos/all-categories.dto");
 const category_dto_1 = require("./dtos/category.dto");
+const create_dish_dto_1 = require("./dtos/create-dish.dto");
+const delete_dish_dto_1 = require("./dtos/delete-dish.dto");
 const delete_restaurant_dto_1 = require("./dtos/delete-restaurant.dto");
+const edit_dish_dto_1 = require("./dtos/edit-dish.dto");
 const edit_restaurant_dto_1 = require("./dtos/edit-restaurant.dto");
 const restaurant_dto_1 = require("./dtos/restaurant.dto");
 const restaurants_dto_1 = require("./dtos/restaurants.dto");
@@ -27,10 +30,12 @@ const user_entity_1 = require("../users/entities/user.entity");
 const index_1 = require("typeorm/index");
 const restaurant_entity_1 = require("./entities/restaurant.entity");
 const category_repository_1 = require("./repositories/category.repository");
+const dish_entity_1 = require("./entities/dish.entity");
 let RestaurantsService = class RestaurantsService {
-    constructor(restaurants, categories) {
+    constructor(restaurants, categories, dishes) {
         this.restaurants = restaurants;
         this.categories = categories;
+        this.dishes = dishes;
     }
     async createRestaurant(owner, createRestaurantInput) {
         console.log('calling service...');
@@ -185,7 +190,9 @@ let RestaurantsService = class RestaurantsService {
     }
     async findRestaurantById({ restaurantId, }) {
         try {
-            const restaurant = await this.restaurants.findOne(restaurantId);
+            const restaurant = await this.restaurants.findOne(restaurantId, {
+                relations: ['menu'],
+            });
             if (!restaurant) {
                 return {
                     ok: false,
@@ -227,12 +234,98 @@ let RestaurantsService = class RestaurantsService {
             };
         }
     }
+    async createDish(owner, createDishInput) {
+        try {
+            const restaurant = await this.restaurants.findOne(createDishInput.restaurantId);
+            if (!restaurant) {
+                return {
+                    ok: false,
+                    error: 'Restaurant not found!',
+                };
+            }
+            if (owner.id !== restaurant.ownerId) {
+                return {
+                    ok: false,
+                    error: 'You are not authorized to create a dish',
+                };
+            }
+            await this.dishes.save(this.dishes.create(Object.assign(Object.assign({}, createDishInput), { restaurant })));
+            return {
+                ok: true,
+            };
+        }
+        catch (err) {
+            console.log(err);
+            return {
+                ok: false,
+                error: 'Could not create a dish',
+            };
+        }
+    }
+    async checkDishOwner(ownerId, dishId) {
+        const dish = await this.dishes.findOne(dishId, {
+            relations: ['restaurant'],
+        });
+        return dish.restaurant.ownerId === ownerId;
+    }
+    async editDish(owner, editDishInput) {
+        try {
+            const isOwner = await this.checkDishOwner(owner.id, editDishInput.dishId);
+            if (!isOwner) {
+                return {
+                    ok: false,
+                    error: "Don't authorized do delete the dish",
+                };
+            }
+            await this.dishes.save([
+                Object.assign({ id: editDishInput.dishId }, editDishInput),
+            ]);
+            return {
+                ok: true,
+            };
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+    async deleteDish(owner, deleteDishInput) {
+        try {
+            const dish = await this.dishes.findOne(deleteDishInput.dishId);
+            console.log(dish);
+            if (!dish) {
+                return {
+                    ok: false,
+                    error: 'Dish is not found!',
+                };
+            }
+            const isOwner = this.checkDishOwner(owner.id, deleteDishInput.dishId);
+            if (!isOwner) {
+                return {
+                    ok: false,
+                    error: "Don't authorized do delete the dish",
+                };
+            }
+            await this.dishes.delete(deleteDishInput.dishId);
+            return {
+                ok: true,
+            };
+        }
+        catch (err) {
+            console.log(err);
+            return {
+                ok: false,
+                error: 'Dish is not deleted!',
+            };
+        }
+    }
 };
 RestaurantsService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(restaurant_entity_1.Restaurant)),
+    __param(2, typeorm_1.InjectRepository(dish_entity_1.Dish)),
     __metadata("design:paramtypes", [index_1.Repository,
-        category_repository_1.CategoryRepository])
+        category_repository_1.CategoryRepository,
+        index_1.Repository])
 ], RestaurantsService);
 exports.RestaurantsService = RestaurantsService;
 //# sourceMappingURL=restaurants.service.js.map
