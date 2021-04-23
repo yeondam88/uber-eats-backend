@@ -30,26 +30,38 @@
   <component name="ChangeListManager">
     <list default="true" id="af709103-be47-4370-8fb1-cca9f87e8c80" name="Default Changelist" comment="refactored test code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/create-dish.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/create-dish.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/create-dish.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/create-dish.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/create-dish.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/create-dish.dto.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/delete-restaurant.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/delete-restaurant.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/delete-restaurant.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/delete-restaurant.dto.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/edit-restaurant.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/edit-restaurant.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/dtos/edit-restaurant.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/dtos/edit-restaurant.dto.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/entities/dish.entity.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/entities/dish.entity.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/entities/dish.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/entities/dish.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/restaurants/entities/dish.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/entities/dish.entity.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/restaurants/entities/restaurant.entity.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/entities/restaurant.entity.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/restaurants/entities/restaurant.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/entities/restaurant.entity.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/restaurants/entities/restaurant.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/entities/restaurant.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.resolver.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.resolver.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.resolver.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.resolver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.resolver.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.resolver.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.service.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/restaurants/restaurants.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/restaurants/restaurants.service.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/users/dtos/edit-profile.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/dtos/edit-profile.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/users/entities/user.entity.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/entities/user.entity.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/users/entities/user.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/entities/user.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/users/entities/user.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/users/entities/user.entity.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurants/dtos/create-dish.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/dtos/create-dish.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurants/dtos/delete-restaurant.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/dtos/delete-restaurant.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurants/dtos/edit-restaurant.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/dtos/edit-restaurant.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurants/entities/dish.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/entities/dish.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/restaurants/entities/restaurant.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/entities/restaurant.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/restaurants/restaurants.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/restaurants.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/restaurants/restaurants.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/restaurants.resolver.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/restaurants/restaurants.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurants/restaurants.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/entities/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/entities/user.entity.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +112,8 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -109,13 +121,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start:dev">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -229,7 +243,8 @@
       <workItem from="1609816501821" duration="1247000" />
       <workItem from="1609903597892" duration="772000" />
       <workItem from="1614924855474" duration="8103000" />
-      <workItem from="1619057539958" duration="9180000" />
+      <workItem from="1619057539958" duration="10782000" />
+      <workItem from="1619151392151" duration="2276000" />
     </task>
     <task id="LOCAL-00001" summary="Connecting to DB">
       <created>1605158775352</created>

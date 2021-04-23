@@ -15,7 +15,7 @@ const output_dto_1 = require("../../common/dtos/output.dto");
 let DeleteRestaurantInput = class DeleteRestaurantInput {
 };
 __decorate([
-    graphql_1.Field(() => Number),
+    graphql_1.Field(() => graphql_1.Int),
     __metadata("design:type", Number)
 ], DeleteRestaurantInput.prototype, "restaurantId", void 0);
 DeleteRestaurantInput = __decorate([

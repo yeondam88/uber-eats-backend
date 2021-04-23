@@ -16,7 +16,7 @@ const create_restaurant_dto_1 = require("./create-restaurant.dto");
 let EditRestaurantInput = class EditRestaurantInput extends graphql_1.PartialType(create_restaurant_dto_1.CreateRestaurantInput) {
 };
 __decorate([
-    graphql_1.Field(() => Number),
+    graphql_1.Field(() => graphql_1.Int),
     __metadata("design:type", Number)
 ], EditRestaurantInput.prototype, "restaurantId", void 0);
 EditRestaurantInput = __decorate([

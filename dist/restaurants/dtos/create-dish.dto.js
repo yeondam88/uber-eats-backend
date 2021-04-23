@@ -21,7 +21,7 @@ let CreateDishInput = class CreateDishInput extends graphql_1.PickType(dish_enti
 ]) {
 };
 __decorate([
-    graphql_1.Field(() => Number),
+    graphql_1.Field(() => graphql_1.Int),
     __metadata("design:type", Number)
 ], CreateDishInput.prototype, "restaurantId", void 0);
 CreateDishInput = __decorate([

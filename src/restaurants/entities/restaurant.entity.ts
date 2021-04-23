@@ -1,16 +1,21 @@
-import { Field, InputType, ObjectType } from '@nestjs/graphql';
-import { CoreEntity } from 'src/common/entities/core.entity';
-import { Category } from 'src/restaurants/entities/category.entity';
+import {
+  Field,
+  InputType,
+  ObjectType,
+} from '@nestjs/graphql'
+import { CoreEntity } from 'src/common/entities/core.entity'
+import { Order } from 'src/orders/entities/order.entity'
+import { Category } from 'src/restaurants/entities/category.entity'
 import {
   Entity,
   Column,
   ManyToOne,
   RelationId,
   OneToMany,
-} from 'typeorm/index';
-import { IsString, Length } from 'class-validator';
-import { User } from 'src/users/entities/user.entity';
-import { Dish } from './dish.entity';
+} from 'typeorm'
+import { IsString, Length } from 'class-validator'
+import { User } from 'src/users/entities/user.entity'
+import { Dish } from './dish.entity'
 
 @InputType('RestaurantInputType', { isAbstract: true })
 @ObjectType()
@@ -20,33 +25,43 @@ export class Restaurant extends CoreEntity {
   @Column()
   @IsString()
   @Length(2, 5)
-  name: string;
+  name: string
 
   @Field(() => String)
   @Column()
   @IsString()
-  coverImage: string;
+  coverImage: string
 
   @Field(() => String)
   @Column()
   @IsString()
-  address: string;
+  address: string
 
   @Field(() => Category, { nullable: true })
-  @ManyToOne(() => Category, (category) => category.restaurants, {
-    nullable: true,
-    onDelete: 'SET NULL',
-  })
-  category: Category;
+  @ManyToOne(
+    () => Category,
+    (category) => category.restaurants,
+    {
+      nullable: true,
+      onDelete: 'SET NULL',
+    }
+  )
+  category: Category
 
   @Field(() => User)
-  @ManyToOne(() => User, (user) => user.restaurants, { onDelete: 'CASCADE' })
-  owner: User;
+  @ManyToOne(() => User, (user) => user.restaurants, {
+    onDelete: 'CASCADE',
+  })
+  owner: User
+
+  @Field(() => [Order])
+  @OneToMany(() => Order, (order) => order.restaurant)
+  orders: Order[]
 
   @RelationId((restaurant: Restaurant) => restaurant.owner)
-  ownerId: number;
+  ownerId: number
 
   @Field(() => [Dish])
   @OneToMany(() => Dish, (dish) => dish.restaurant)
-  menu: Dish[];
+  menu: Dish[]
 }

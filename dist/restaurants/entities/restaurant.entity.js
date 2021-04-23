@@ -12,8 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Restaurant = void 0;
 const graphql_1 = require("@nestjs/graphql");
 const core_entity_1 = require("../../common/entities/core.entity");
+const order_entity_1 = require("../../orders/entities/order.entity");
 const category_entity_1 = require("./category.entity");
-const index_1 = require("typeorm/index");
+const typeorm_1 = require("typeorm");
 const class_validator_1 = require("class-validator");
 const user_entity_1 = require("../../users/entities/user.entity");
 const dish_entity_1 = require("./dish.entity");
@@ -21,26 +22,26 @@ let Restaurant = class Restaurant extends core_entity_1.CoreEntity {
 };
 __decorate([
     graphql_1.Field(() => String),
-    index_1.Column(),
+    typeorm_1.Column(),
     class_validator_1.IsString(),
     class_validator_1.Length(2, 5),
     __metadata("design:type", String)
 ], Restaurant.prototype, "name", void 0);
 __decorate([
     graphql_1.Field(() => String),
-    index_1.Column(),
+    typeorm_1.Column(),
     class_validator_1.IsString(),
     __metadata("design:type", String)
 ], Restaurant.prototype, "coverImage", void 0);
 __decorate([
     graphql_1.Field(() => String),
-    index_1.Column(),
+    typeorm_1.Column(),
     class_validator_1.IsString(),
     __metadata("design:type", String)
 ], Restaurant.prototype, "address", void 0);
 __decorate([
     graphql_1.Field(() => category_entity_1.Category, { nullable: true }),
-    index_1.ManyToOne(() => category_entity_1.Category, (category) => category.restaurants, {
+    typeorm_1.ManyToOne(() => category_entity_1.Category, (category) => category.restaurants, {
         nullable: true,
         onDelete: 'SET NULL',
     }),
@@ -48,22 +49,29 @@ __decorate([
 ], Restaurant.prototype, "category", void 0);
 __decorate([
     graphql_1.Field(() => user_entity_1.User),
-    index_1.ManyToOne(() => user_entity_1.User, (user) => user.restaurants, { onDelete: 'CASCADE' }),
+    typeorm_1.ManyToOne(() => user_entity_1.User, (user) => user.restaurants, {
+        onDelete: 'CASCADE',
+    }),
     __metadata("design:type", user_entity_1.User)
 ], Restaurant.prototype, "owner", void 0);
 __decorate([
-    index_1.RelationId((restaurant) => restaurant.owner),
+    graphql_1.Field(() => [order_entity_1.Order]),
+    typeorm_1.OneToMany(() => order_entity_1.Order, (order) => order.restaurant),
+    __metadata("design:type", Array)
+], Restaurant.prototype, "orders", void 0);
+__decorate([
+    typeorm_1.RelationId((restaurant) => restaurant.owner),
     __metadata("design:type", Number)
 ], Restaurant.prototype, "ownerId", void 0);
 __decorate([
     graphql_1.Field(() => [dish_entity_1.Dish]),
-    index_1.OneToMany(() => dish_entity_1.Dish, (dish) => dish.restaurant),
+    typeorm_1.OneToMany(() => dish_entity_1.Dish, (dish) => dish.restaurant),
     __metadata("design:type", Array)
 ], Restaurant.prototype, "menu", void 0);
 Restaurant = __decorate([
     graphql_1.InputType('RestaurantInputType', { isAbstract: true }),
     graphql_1.ObjectType(),
-    index_1.Entity()
+    typeorm_1.Entity()
 ], Restaurant);
 exports.Restaurant = Restaurant;
 //# sourceMappingURL=restaurant.entity.js.map

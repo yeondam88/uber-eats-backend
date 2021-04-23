@@ -27,7 +27,7 @@ const restaurants_dto_1 = require("./dtos/restaurants.dto");
 const search_restaurant_dto_1 = require("./dtos/search-restaurant.dto");
 const category_entity_1 = require("./entities/category.entity");
 const user_entity_1 = require("../users/entities/user.entity");
-const index_1 = require("typeorm/index");
+const typeorm_2 = require("typeorm");
 const restaurant_entity_1 = require("./entities/restaurant.entity");
 const category_repository_1 = require("./repositories/category.repository");
 const dish_entity_1 = require("./entities/dish.entity");
@@ -215,7 +215,7 @@ let RestaurantsService = class RestaurantsService {
         try {
             const [restaurants, totalResults] = await this.restaurants.findAndCount({
                 where: {
-                    name: index_1.Raw((name) => `${name} ILIKE '%${query}%'`),
+                    name: typeorm_2.Raw((name) => `${name} ILIKE '%${query}%'`),
                 },
                 skip: (page - 1) * 25,
                 take: 25,
@@ -286,6 +286,9 @@ let RestaurantsService = class RestaurantsService {
         }
         catch (err) {
             console.log(err);
+            return {
+                ok: false,
+            };
         }
     }
     async deleteDish(owner, deleteDishInput) {
@@ -323,9 +326,9 @@ RestaurantsService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(restaurant_entity_1.Restaurant)),
     __param(2, typeorm_1.InjectRepository(dish_entity_1.Dish)),
-    __metadata("design:paramtypes", [index_1.Repository,
+    __metadata("design:paramtypes", [typeorm_2.Repository,
         category_repository_1.CategoryRepository,
-        index_1.Repository])
+        typeorm_2.Repository])
 ], RestaurantsService);
 exports.RestaurantsService = RestaurantsService;
 //# sourceMappingURL=restaurants.service.js.map

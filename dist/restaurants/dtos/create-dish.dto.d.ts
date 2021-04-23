@@ -1,6 +1,6 @@
 import { CommonOutput } from 'src/common/dtos/output.dto';
 import { Dish } from '../entities/dish.entity';
-declare const CreateDishInput_base: import("@nestjs/common").Type<Pick<Dish, "name" | "price" | "description" | "options">>;
+declare const CreateDishInput_base: import("@nestjs/common").Type<Pick<Dish, "name" | "options" | "price" | "description">>;
 export declare class CreateDishInput extends CreateDishInput_base {
     restaurantId: number;
 }

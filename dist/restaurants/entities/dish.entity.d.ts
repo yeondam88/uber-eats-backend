@@ -1,8 +1,12 @@
 import { CoreEntity } from 'src/common/entities/core.entity';
 import { Restaurant } from 'src/restaurants/entities/restaurant.entity';
-declare class DishOption {
+declare class DishChoice {
     name: string;
-    choices?: string[];
+    extra?: number;
+}
+export declare class DishOption {
+    name: string;
+    choices?: DishChoice[];
     extra?: number;
 }
 export declare class Dish extends CoreEntity {

@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { tryCatch } from 'rxjs/internal-compatibility';
 import { AllCategoriesOutput } from 'src/restaurants/dtos/all-categories.dto';
 import {
   CategoryInput,
@@ -40,7 +39,7 @@ import {
 } from 'src/restaurants/dtos/search-restaurant.dto';
 import { Category } from 'src/restaurants/entities/category.entity';
 import { User } from 'src/users/entities/user.entity';
-import { Like, Raw, Repository } from 'typeorm/index';
+import { Raw, Repository } from 'typeorm';
 import {
   CreateRestaurantInput,
   CreateRestaurantOutput,
@@ -362,6 +361,9 @@ export class RestaurantsService {
       };
     } catch (err) {
       console.log(err);
+      return {
+        ok: false,
+      };
     }
   }
 

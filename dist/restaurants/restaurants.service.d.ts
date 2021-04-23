@@ -10,7 +10,7 @@ import { RestaurantsInput, RestaurantsOutput } from 'src/restaurants/dtos/restau
 import { SearchRestaurantInput, SearchRestaurantOutput } from 'src/restaurants/dtos/search-restaurant.dto';
 import { Category } from 'src/restaurants/entities/category.entity';
 import { User } from 'src/users/entities/user.entity';
-import { Repository } from 'typeorm/index';
+import { Repository } from 'typeorm';
 import { CreateRestaurantInput, CreateRestaurantOutput } from './dtos/create-restaurant.dto';
 import { Restaurant } from './entities/restaurant.entity';
 import { CategoryRepository } from 'src/restaurants/repositories/category.repository';

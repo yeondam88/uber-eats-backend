@@ -17,6 +17,7 @@ const core_entity_1 = require("../../common/entities/core.entity");
 const graphql_1 = require("@nestjs/graphql");
 const bcrypt = require("bcrypt");
 const common_1 = require("@nestjs/common");
+const order_entity_1 = require("../../orders/entities/order.entity");
 var UserRole;
 (function (UserRole) {
     UserRole["Client"] = "Client";
@@ -75,9 +76,19 @@ __decorate([
 ], User.prototype, "verified", void 0);
 __decorate([
     graphql_1.Field(() => [restaurant_entity_1.Restaurant]),
-    index_1.OneToMany(() => restaurant_entity_1.Restaurant, (Restaurant) => Restaurant.owner),
+    index_1.OneToMany(() => restaurant_entity_1.Restaurant, (restaurant) => restaurant.owner),
     __metadata("design:type", Array)
 ], User.prototype, "restaurants", void 0);
+__decorate([
+    graphql_1.Field(() => [order_entity_1.Order]),
+    index_1.OneToMany(() => order_entity_1.Order, (order) => order.customer),
+    __metadata("design:type", Array)
+], User.prototype, "orders", void 0);
+__decorate([
+    graphql_1.Field(() => [order_entity_1.Order]),
+    index_1.OneToMany(() => order_entity_1.Order, (order) => order.driver),
+    __metadata("design:type", Array)
+], User.prototype, "rides", void 0);
 __decorate([
     index_1.BeforeInsert(),
     index_1.BeforeUpdate(),

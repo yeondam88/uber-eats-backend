@@ -1,9 +1,9 @@
-import { Field, InputType, ObjectType } from '@nestjs/graphql';
+import { Field, InputType, Int, ObjectType } from '@nestjs/graphql';
 import { CommonOutput } from 'src/common/dtos/output.dto';
 
 @InputType()
 export class DeleteRestaurantInput {
-  @Field(() => Number)
+  @Field(() => Int)
   restaurantId: number;
 }
 

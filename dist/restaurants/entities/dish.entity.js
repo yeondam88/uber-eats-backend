@@ -9,12 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Dish = void 0;
+exports.Dish = exports.DishOption = void 0;
 const graphql_1 = require("@nestjs/graphql");
 const core_entity_1 = require("../../common/entities/core.entity");
 const restaurant_entity_1 = require("./restaurant.entity");
 const typeorm_1 = require("typeorm");
 const class_validator_1 = require("class-validator");
+let DishChoice = class DishChoice {
+};
+__decorate([
+    graphql_1.Field(() => String),
+    __metadata("design:type", String)
+], DishChoice.prototype, "name", void 0);
+__decorate([
+    graphql_1.Field(() => graphql_1.Int, { nullable: true }),
+    __metadata("design:type", Number)
+], DishChoice.prototype, "extra", void 0);
+DishChoice = __decorate([
+    graphql_1.InputType('DishChoiceInputType', { isAbstract: true }),
+    graphql_1.ObjectType()
+], DishChoice);
 let DishOption = class DishOption {
 };
 __decorate([
@@ -22,17 +36,18 @@ __decorate([
     __metadata("design:type", String)
 ], DishOption.prototype, "name", void 0);
 __decorate([
-    graphql_1.Field(() => [String], { nullable: true }),
+    graphql_1.Field(() => [DishChoice], { nullable: true }),
     __metadata("design:type", Array)
 ], DishOption.prototype, "choices", void 0);
 __decorate([
-    graphql_1.Field(() => Number, { nullable: true }),
+    graphql_1.Field(() => graphql_1.Int, { nullable: true }),
     __metadata("design:type", Number)
 ], DishOption.prototype, "extra", void 0);
 DishOption = __decorate([
     graphql_1.InputType('DishOptionInputType', { isAbstract: true }),
     graphql_1.ObjectType()
 ], DishOption);
+exports.DishOption = DishOption;
 let Dish = class Dish extends core_entity_1.CoreEntity {
 };
 __decorate([
@@ -43,7 +58,7 @@ __decorate([
     __metadata("design:type", String)
 ], Dish.prototype, "name", void 0);
 __decorate([
-    graphql_1.Field(() => Number),
+    graphql_1.Field(() => graphql_1.Int),
     typeorm_1.Column(),
     class_validator_1.IsNumber(),
     __metadata("design:type", Number)

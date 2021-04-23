@@ -3,32 +3,40 @@ import {
   NestModule,
   RequestMethod,
   MiddlewareConsumer,
-} from '@nestjs/common';
-import { GraphQLModule } from '@nestjs/graphql';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule } from '@nestjs/config';
+} from '@nestjs/common'
+import { GraphQLModule } from '@nestjs/graphql'
+import { TypeOrmModule } from '@nestjs/typeorm'
+import { ConfigModule } from '@nestjs/config'
 
-import * as Joi from 'joi';
-import { AuthModule } from 'src/auth/auth.module';
-import { Category } from 'src/restaurants/entities/category.entity';
-import { Restaurant } from 'src/restaurants/entities/restaurant.entity';
-import { RestaurantsModule } from 'src/restaurants/restaurants.module';
-import { UsersModule } from './users/users.module';
-import { User } from './users/entities/user.entity';
-import { JwtModule } from './jwt/jwt.module';
-import { JwtMiddleware } from './jwt/jwt.middleware';
-import { Verification } from './users/entities/verification.entity';
-import { MailModule } from './mail/mail.module';
-import { Dish } from './restaurants/entities/dish.entity';
+import * as Joi from 'joi'
+import { AuthModule } from 'src/auth/auth.module'
+import { Order } from 'src/orders/entities/order.entity'
+import { Category } from 'src/restaurants/entities/category.entity'
+import { Restaurant } from 'src/restaurants/entities/restaurant.entity'
+import { RestaurantsModule } from 'src/restaurants/restaurants.module'
+import { UsersModule } from './users/users.module'
+import { User } from './users/entities/user.entity'
+import { JwtModule } from './jwt/jwt.module'
+import { JwtMiddleware } from './jwt/jwt.middleware'
+import { Verification } from './users/entities/verification.entity'
+import { MailModule } from './mail/mail.module'
+import { Dish } from './restaurants/entities/dish.entity'
+import { OrdersModule } from './orders/orders.module'
+import { OrderItem } from './orders/entities/order-item.entity'
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env.test',
+      envFilePath:
+        process.env.NODE_ENV === 'dev'
+          ? '.env.dev'
+          : '.env.test',
       ignoreEnvFile: process.env.NODE_ENV === 'prod',
       validationSchema: Joi.object({
-        NODE_ENV: Joi.string().valid('dev', 'prod', 'test').required(),
+        NODE_ENV: Joi.string()
+          .valid('dev', 'prod', 'test')
+          .required(),
         DB_HOST: Joi.string().required(),
         DB_PORT: Joi.string().required(),
         DB_USERNAME: Joi.string().required(),
@@ -49,8 +57,17 @@ import { Dish } from './restaurants/entities/dish.entity';
       database: process.env.DB_NAME,
       synchronize: process.env.NODE_ENV !== 'prod',
       logging:
-        process.env.NODE_ENV !== 'prod' && process.env.NODE_ENV !== 'test',
-      entities: [User, Verification, Restaurant, Category, Dish],
+        process.env.NODE_ENV !== 'prod' &&
+        process.env.NODE_ENV !== 'test',
+      entities: [
+        User,
+        Verification,
+        Restaurant,
+        Category,
+        Dish,
+        Order,
+        OrderItem,
+      ],
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
@@ -69,6 +86,7 @@ import { Dish } from './restaurants/entities/dish.entity';
     AuthModule,
     UsersModule,
     RestaurantsModule,
+    OrdersModule,
   ],
   controllers: [],
   providers: [],
@@ -78,6 +96,6 @@ export class AppModule implements NestModule {
     consumer.apply(JwtMiddleware).forRoutes({
       path: '/graphql',
       method: RequestMethod.POST,
-    });
+    })
   }
 }

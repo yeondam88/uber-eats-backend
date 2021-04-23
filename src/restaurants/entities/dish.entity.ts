@@ -1,18 +1,37 @@
-import { Field, InputType, ObjectType } from '@nestjs/graphql';
-import { CoreEntity } from 'src/common/entities/core.entity';
-import { Restaurant } from 'src/restaurants/entities/restaurant.entity';
-import { Entity, Column, ManyToOne, RelationId } from 'typeorm';
-import { IsNumber, IsString, Length } from 'class-validator';
+import {
+  Field,
+  InputType,
+  Int,
+  ObjectType,
+} from '@nestjs/graphql'
+import { CoreEntity } from 'src/common/entities/core.entity'
+import { Restaurant } from 'src/restaurants/entities/restaurant.entity'
+import {
+  Entity,
+  Column,
+  ManyToOne,
+  RelationId,
+} from 'typeorm'
+import { IsNumber, IsString, Length } from 'class-validator'
+
+@InputType('DishChoiceInputType', { isAbstract: true })
+@ObjectType()
+class DishChoice {
+  @Field(() => String)
+  name: string
+  @Field(() => Int, { nullable: true })
+  extra?: number
+}
 
 @InputType('DishOptionInputType', { isAbstract: true })
 @ObjectType()
-class DishOption {
+export class DishOption {
   @Field(() => String)
-  name: string;
-  @Field(() => [String], { nullable: true })
-  choices?: string[];
-  @Field(() => Number, { nullable: true })
-  extra?: number;
+  name: string
+  @Field(() => [DishChoice], { nullable: true })
+  choices?: DishChoice[]
+  @Field(() => Int, { nullable: true })
+  extra?: number
 }
 
 @InputType('DishInputType', { isAbstract: true })
@@ -23,33 +42,37 @@ export class Dish extends CoreEntity {
   @Column({ unique: true })
   @IsString()
   @Length(5)
-  name: string;
+  name: string
 
-  @Field(() => Number)
+  @Field(() => Int)
   @Column()
   @IsNumber()
-  price: number;
+  price: number
 
   @Field(() => String, { nullable: true })
   @Column({ nullable: true })
   @IsString()
-  photo: string;
+  photo: string
 
   @Field(() => String)
   @Column()
   @Length(5, 140)
-  description: string;
+  description: string
 
   @Field(() => Restaurant, { nullable: true })
-  @ManyToOne(() => Restaurant, (restaurant) => restaurant.menu, {
-    onDelete: 'CASCADE',
-  })
-  restaurant: Restaurant;
+  @ManyToOne(
+    () => Restaurant,
+    (restaurant) => restaurant.menu,
+    {
+      onDelete: 'CASCADE',
+    }
+  )
+  restaurant: Restaurant
 
   @RelationId((dish: Dish) => dish.restaurant)
-  restaurantId: number;
+  restaurantId: number
 
   @Field(() => [DishOption], { nullable: true })
   @Column({ type: 'json', nullable: true })
-  options?: DishOption[];
+  options?: DishOption[]
 }
